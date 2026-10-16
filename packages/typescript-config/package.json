@@ -1,0 +1,11 @@
+{
+  "name": "@honey-ds/typescript-config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./base.json": "./base.json",
+    "./react-lib.json": "./react-lib.json",
+    "./vite-app.json": "./vite-app.json"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "@honey-ds/icons",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts",
+    "./manifest.json": "./src/generated/manifest.json",
+    "./*": "./src/generated/*.tsx"
+  },
+  "scripts": {
+    "import-from-kit": "node scripts/import-from-kit.ts",
+    "build": "node scripts/generate.ts",
+    "typecheck": "tsc --noEmit -p .",
+    "lint": "eslint .",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@honey-ds/eslint-config": "*",
+    "@honey-ds/typescript-config": "*",
+    "@svgr/core": "8.1.0",
+    "@svgr/plugin-jsx": "8.1.0",
+    "@svgr/plugin-svgo": "8.1.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "9.39.5",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "svgo": "^3.3.2",
+    "typescript": "6.0.3",
+    "vitest": "5.0.3"
+  }
+}

@@ -1,0 +1,9 @@
+yarn.lock
+dist
+**/dist
+storybook-static
+packages/tokens/figma
+packages/icons/src/generated
+packages/icons/svg
+docs/ai/*.json
+packages/tokens/reference

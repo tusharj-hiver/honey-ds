@@ -1,0 +1,16 @@
+{
+  "layout": {
+    "list": { "$type": "dimension", "$value": "320px" },
+    "list-min": { "$type": "dimension", "$value": "280px" },
+    "list-max": { "$type": "dimension", "$value": "560px" },
+    "side": { "$type": "dimension", "$value": "400px" },
+    "side-min": { "$type": "dimension", "$value": "280px" },
+    "side-max": { "$type": "dimension", "$value": "640px" },
+    "nav-collapsed": { "$type": "dimension", "$value": "50px" },
+    "nav-expanded": { "$type": "dimension", "$value": "220px" },
+    "rail": { "$type": "dimension", "$value": "40px" },
+    "row": { "$type": "dimension", "$value": "56px" },
+    "pane-gap": { "$type": "dimension", "$value": "{spacing.2}" },
+    "conversation-min": { "$type": "dimension", "$value": "480px" }
+  }
+}

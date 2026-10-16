@@ -1,0 +1,4 @@
+{
+  "extends": "@honey-ds/typescript-config/react-lib.json",
+  "include": ["src", ".storybook", "vitest.config.ts"]
+}

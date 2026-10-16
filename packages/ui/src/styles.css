@@ -1,0 +1,32 @@
+/*
+ * The one stylesheet for anything that renders @honey-ds/ui — Storybook and apps/web both import it,
+ * so fonts, tokens and the Tailwind theme can't drift between them.
+ */
+@import 'tailwindcss';
+@import '@fontsource-variable/hanken-grotesk';
+@import '@fontsource-variable/jetbrains-mono';
+@import '@honey-ds/tokens/tokens.css';
+@import '@honey-ds/tokens/theme.css';
+@import '@honey-ds/tokens/shadcn.css';
+
+/* Workspace packages are symlinked under node_modules, which Tailwind v4 skips when detecting
+   sources. Without this, component classes exist in Storybook but are missing in the app. */
+@source './';
+
+@layer base {
+  /* Scrollbars and native form controls follow the theme: the system's, unless one is chosen. */
+  :root {
+    color-scheme: light dark;
+  }
+  :root[data-theme='light'] {
+    color-scheme: light;
+  }
+  :root[data-theme='dark'] {
+    color-scheme: dark;
+  }
+  html {
+    font-family: var(--hds-font-family-sans);
+    color: var(--hds-text-neutral-default);
+    background: var(--hds-background-neutral-white);
+  }
+}

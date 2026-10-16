@@ -1,0 +1,32 @@
+{
+  "name": "@honey-ds/tokens",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./tokens.css": "./dist/tokens.css",
+    "./theme.css": "./dist/theme.css",
+    "./shadcn.css": "./dist/shadcn.css",
+    "./tokens.json": "./dist/tokens.json",
+    "./tokens.ts": "./dist/tokens.ts"
+  },
+  "scripts": {
+    "from-scrape": "node scripts/from-scrape.ts",
+    "tokens:build": "node scripts/build.ts",
+    "lint": "eslint .",
+    "test": "vitest run && node scripts/crosscheck.ts",
+    "typecheck": "tsc --noEmit -p .",
+    "build": "node scripts/build.ts",
+    "crosscheck": "node scripts/crosscheck.ts"
+  },
+  "devDependencies": {
+    "@honey-ds/eslint-config": "*",
+    "@honey-ds/typescript-config": "*",
+    "@types/node": "^24.0.0",
+    "eslint": "9.39.5",
+    "style-dictionary": "5.6.0",
+    "tailwindcss": "4.3.3",
+    "typescript": "6.0.3",
+    "vitest": "5.0.3"
+  }
+}

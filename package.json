@@ -1,0 +1,32 @@
+{
+  "name": "honey-ds",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "tooling/*"
+  ],
+  "packageManager": "yarn@1.22.22",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "storybook": "turbo run build --filter=@honey-ds/tokens --filter=@honey-ds/icons && yarn workspace @honey-ds/ui storybook",
+    "build-storybook": "turbo run build --filter=@honey-ds/tokens --filter=@honey-ds/icons && yarn workspace @honey-ds/ui build-storybook",
+    "chromatic": "chromatic --storybook-build-dir packages/ui/storybook-static --only-changed",
+    "typecheck": "turbo run typecheck",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint:css": "stylelint '**/*.css'",
+    "check-versions": "node tooling/scripts/check-versions.ts"
+  },
+  "devDependencies": {
+    "chromatic": "18.11.0",
+    "prettier": "3.9.9",
+    "stylelint": "^17.16.0",
+    "turbo": "2.11.7",
+    "typescript": "6.0.3"
+  }
+}

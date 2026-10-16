@@ -1,0 +1,52 @@
+name: Tokens regenerate
+
+# A PR that changes the Figma export gets its generated docs committed back to the branch, so the
+# design change, the docs/ai diff and the Chromatic diff review together. Commits with
+# TOKENS_BOT_TOKEN (a GitHub App or PAT) when set, because a push made with GITHUB_TOKEN does not
+# start CI again; without it, re-run the PR's checks by hand after the bot commit.
+on:
+  pull_request:
+    paths: ['packages/tokens/figma/**']
+
+concurrency:
+  group: tokens-regenerate-${{ github.head_ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    # Fork PRs cannot be pushed to.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.TOKENS_BOT_TOKEN || github.token }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+      - name: Build tokens and icons, cross-check the export
+        run: yarn turbo run build test --filter=@honey-ds/tokens --filter=@honey-ds/icons
+      - name: Rebuild docs/ai
+        run: |
+          yarn workspace @honey-ds/ui build-storybook --quiet
+          yarn workspace @honey-ds/ui docs:ai
+      - name: Commit
+        run: |
+          if git diff --quiet -- docs/ai; then echo "docs/ai already up to date"; exit 0; fi
+          git config user.name "honey-ds-tokens-bot"
+          git config user.email "honey-ds-tokens-bot@users.noreply.github.com"
+          git add docs/ai
+          git commit -m "chore(tokens): regenerate docs/ai from the Figma export"
+          git push
+          if [ -z "$HAS_BOT_TOKEN" ]; then
+            echo "::warning::Pushed with GITHUB_TOKEN, so CI will not re-run on its own. Re-run the PR checks."
+          fi
+        env:
+          HAS_BOT_TOKEN: ${{ secrets.TOKENS_BOT_TOKEN != '' && 'yes' || '' }}

@@ -1,0 +1,9 @@
+{
+  "extends": "@honey-ds/typescript-config/react-lib.json",
+  "compilerOptions": {
+    "types": ["node"],
+    "allowImportingTsExtensions": true,
+    "erasableSyntaxOnly": true
+  },
+  "include": ["src", "scripts"]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "typecheck": {
+      "dependsOn": ["^build", "build"]
+    },
+    "lint": {
+      "dependsOn": ["^build"]
+    },
+    "test": {
+      "dependsOn": ["^build", "build"]
+    },
+    "tokens:build": {
+      "inputs": ["figma/**", "manual/**", "scripts/**", "sd.config.ts"],
+      "outputs": ["dist/**"]
+    }
+  },
+  "agentGuidance": false
+}

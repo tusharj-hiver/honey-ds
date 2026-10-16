@@ -1,0 +1,32 @@
+{
+ "primitives": {
+  "modes": [
+   "Default",
+   "HIG",
+   "HOT"
+  ],
+  "count": 338
+ },
+ "numeric": {
+  "modes": [
+   "Default"
+  ],
+  "count": 64
+ },
+ "semantic": {
+  "modes": [
+   "Light",
+   "Dark",
+   "Hot - Light",
+   "Hot - Dark"
+  ],
+  "count": 509
+ },
+ "components": {
+  "modes": [
+   "Omni",
+   "HIG"
+  ],
+  "count": 14
+ }
+}

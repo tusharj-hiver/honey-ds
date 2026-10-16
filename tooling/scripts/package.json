@@ -1,0 +1,14 @@
+{
+  "name": "@honey-ds/tooling",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "devDependencies": {
+    "@honey-ds/typescript-config": "*",
+    "@types/node": "^24.0.0",
+    "typescript": "6.0.3"
+  }
+}

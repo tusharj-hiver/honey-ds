@@ -1,0 +1,64 @@
+{
+  "button": {
+    "bg": {
+      "$type": "color",
+      "$value": "{background.brand.default}"
+    },
+    "bg-hover": {
+      "$type": "color",
+      "$value": "{background.brand.strong}"
+    },
+    "bg-pressed": {
+      "$type": "color",
+      "$value": "{background.brand.intense}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{border.brand.strong}"
+    },
+    "focus-ring": {
+      "$type": "color",
+      "$value": "{effect.focus.brand}"
+    },
+    "icon": {
+      "$type": "color",
+      "$value": "{foreground.neutral-bold.intense}"
+    },
+    "icon-destructive": {
+      "$type": "color",
+      "$value": "{foreground.on.error}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.6}"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "{text.on.brand}"
+    }
+  },
+  "focus": {
+    "border": {
+      "$type": "color",
+      "$value": "{border.royal.strong}"
+    },
+    "ring": {
+      "$type": "color",
+      "$value": "{effect.focus.royal}"
+    },
+    "ring-brand": {
+      "$type": "color",
+      "$value": "{effect.focus.brand}"
+    }
+  },
+  "link": {
+    "text": {
+      "$type": "color",
+      "$value": "{text.info.strong}"
+    },
+    "text-hover": {
+      "$type": "color",
+      "$value": "{text.info.intense}"
+    }
+  }
+}

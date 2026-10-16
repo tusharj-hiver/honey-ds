@@ -1,0 +1,199 @@
+{
+ "modes": [
+  "Default"
+ ],
+ "variables": {
+  "spacing/0": {
+   "Default": "scale/0"
+  },
+  "spacing/0_5": {
+   "Default": "scale/0_5"
+  },
+  "spacing/1": {
+   "Default": "scale/1"
+  },
+  "spacing/1_5": {
+   "Default": "scale/1_5"
+  },
+  "spacing/2": {
+   "Default": "scale/2"
+  },
+  "spacing/2_5": {
+   "Default": "scale/2_5"
+  },
+  "spacing/3": {
+   "Default": "scale/3"
+  },
+  "spacing/4": {
+   "Default": "scale/4"
+  },
+  "spacing/5": {
+   "Default": "scale/5"
+  },
+  "spacing/6": {
+   "Default": "scale/6"
+  },
+  "spacing/7": {
+   "Default": "scale/7"
+  },
+  "spacing/8": {
+   "Default": "scale/8"
+  },
+  "spacing/9": {
+   "Default": "scale/9"
+  },
+  "spacing/10": {
+   "Default": "scale/10"
+  },
+  "spacing/12": {
+   "Default": "scale/12"
+  },
+  "spacing/14": {
+   "Default": "scale/14"
+  },
+  "spacing/16": {
+   "Default": "scale/16"
+  },
+  "spacing/20": {
+   "Default": "scale/20"
+  },
+  "spacing/24": {
+   "Default": "scale/24"
+  },
+  "spacing/30": {
+   "Default": "scale/30"
+  },
+  "spacing/32": {
+   "Default": "scale/32"
+  },
+  "spacing/36": {
+   "Default": "scale/36"
+  },
+  "spacing/40": {
+   "Default": "scale/40"
+  },
+  "spacing/48": {
+   "Default": "scale/48"
+  },
+  "spacing/64": {
+   "Default": "scale/64"
+  },
+  "spacing/80": {
+   "Default": "scale/80"
+  },
+  "spacing/96": {
+   "Default": "scale/96"
+  },
+  "radius/0": {
+   "Default": "scale/0"
+  },
+  "radius/2": {
+   "Default": "scale/0_5"
+  },
+  "radius/4": {
+   "Default": "scale/1"
+  },
+  "radius/6": {
+   "Default": "scale/1_5"
+  },
+  "radius/8": {
+   "Default": "scale/2"
+  },
+  "radius/12": {
+   "Default": "scale/3"
+  },
+  "radius/14": {
+   "Default": "scale/3_5"
+  },
+  "radius/16": {
+   "Default": "scale/4"
+  },
+  "radius/24": {
+   "Default": "scale/6"
+  },
+  "radius/32": {
+   "Default": "scale/8"
+  },
+  "radius/36": {
+   "Default": "scale/9"
+  },
+  "radius/40": {
+   "Default": "scale/10"
+  },
+  "radius/48": {
+   "Default": "scale/12"
+  },
+  "radius/64": {
+   "Default": "scale/16"
+  },
+  "radius/80": {
+   "Default": "scale/20"
+  },
+  "radius/96": {
+   "Default": "scale/24"
+  },
+  "radius/120": {
+   "Default": "scale/30"
+  },
+  "radius/128": {
+   "Default": "scale/32"
+  },
+  "radius/144": {
+   "Default": "scale/36"
+  },
+  "radius/full": {
+   "Default": "scale/full"
+  },
+  "radius/20": {
+   "Default": "scale/5"
+  },
+  "radius/28": {
+   "Default": "scale/7"
+  },
+  "radius/10": {
+   "Default": "scale/2_5"
+  },
+  "border-width/0": {
+   "Default": "0"
+  },
+  "border-width/14": {
+   "Default": "1"
+  },
+  "border-width/18": {
+   "Default": "1.33"
+  },
+  "border-width/24": {
+   "Default": "1.5"
+  },
+  "border-width/32": {
+   "Default": "1.7"
+  },
+  "border-width/36": {
+   "Default": "2"
+  },
+  "border-width/40": {
+   "Default": "2.25"
+  },
+  "border-width/48": {
+   "Default": "2.5"
+  },
+  "opacity/0": {
+   "Default": "0"
+  },
+  "opacity/10": {
+   "Default": "0.1"
+  },
+  "opacity/20": {
+   "Default": "0.2"
+  },
+  "opacity/40": {
+   "Default": "0.4"
+  },
+  "opacity/80": {
+   "Default": "0.8"
+  },
+  "opacity/100": {
+   "Default": "1"
+  }
+ }
+}

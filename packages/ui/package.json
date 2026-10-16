@@ -1,0 +1,65 @@
+{
+  "name": "@honey-ds/ui",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": "./src/index.ts",
+    "./styles.css": "./src/styles.css"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p .",
+    "lint": "eslint .",
+    "test": "vitest run --project unit",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test:storybook": "vitest run --project storybook --project storybook-dark",
+    "docs:ai": "node scripts/build-ai-docs.ts",
+    "measure:thread": "node scripts/measure-thread.ts"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "dependencies": {
+    "@base-ui/react": "1.8.0",
+    "@fontsource-variable/hanken-grotesk": "5.3.0",
+    "@fontsource-variable/jetbrains-mono": "5.3.0",
+    "@honey-ds/icons": "*",
+    "@honey-ds/tokens": "*",
+    "@tanstack/react-virtual": "3.14.17",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "dompurify": "3.4.17",
+    "react-resizable-panels": "4.14.5",
+    "tailwind-merge": "^3.3.0"
+  },
+  "devDependencies": {
+    "@honey-ds/eslint-config": "*",
+    "@honey-ds/typescript-config": "*",
+    "@storybook/addon-a11y": "10.6.1",
+    "@storybook/addon-docs": "10.6.1",
+    "@storybook/addon-mcp": "10.6.1",
+    "@storybook/addon-vitest": "10.6.1",
+    "@storybook/react-vite": "10.6.1",
+    "@tailwindcss/vite": "4.3.3",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "@vitest/browser-playwright": "5.0.3",
+    "eslint": "9.39.5",
+    "playwright": "1.64.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "storybook": "10.6.1",
+    "storybook-addon-pseudo-states": "10.6.1",
+    "tailwindcss": "4.3.3",
+    "typescript": "6.0.3",
+    "vite": "8.3.3",
+    "vitest": "5.0.3"
+  }
+}

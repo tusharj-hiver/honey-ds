@@ -1,0 +1,1264 @@
+[
+  {
+    "name": "Avatar",
+    "import": "import { Avatar } from '@honey-ds/ui';",
+    "figmaNode": "4770:1200",
+    "summary": "Honey DS avatar: photo, initials or icon; 9 sizes, circle or rounded, solid or subtle; colour derived from the name.",
+    "useWhen": "Representing a person (customer, agent) or an inbox next to their name or in a list row.",
+    "avoidWhen": "Brand or app logos (use the image directly) or status indicators (use Badge).",
+    "props": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true,
+        "default": null,
+        "description": "Person or inbox name: the accessible name, the initials and the default colour."
+      },
+      {
+        "name": "src",
+        "type": "string | undefined",
+        "required": false,
+        "default": null,
+        "description": "Photo URL (Figma Type=Picture). Initials show until it loads, or if it fails."
+      },
+      {
+        "name": "icon",
+        "type": "ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Icon instead of initials (Figma Type=Icon). Pass an @honey-ds/icons element."
+      },
+      {
+        "name": "background",
+        "type": "'solid' | 'subtle'",
+        "required": false,
+        "default": "'solid'",
+        "description": "Figma `Background`."
+      },
+      {
+        "name": "color",
+        "type": "(typeof AVATAR_COLORS)[number]",
+        "required": false,
+        "default": null,
+        "description": "Figma `Color`. Defaults to a stable colour derived from `name`."
+      },
+      {
+        "name": "size",
+        "type": "unknown",
+        "required": false,
+        "default": "'md'",
+        "description": ""
+      },
+      {
+        "name": "shape",
+        "type": "unknown",
+        "required": false,
+        "default": "'circle'",
+        "description": ""
+      }
+    ],
+    "stories": [
+      {
+        "id": "primitives-avatar--default",
+        "name": "Default",
+        "snippet": "const Default = () => <Avatar name=\"Darlene Robertson\" />;"
+      },
+      {
+        "id": "primitives-avatar--all-variants",
+        "name": "All Variants",
+        "snippet": "const AllVariants = () => (\n  <div className=\"flex flex-col gap-3\">\n    {(['solid', 'subtle'] as const).map((bg) => (\n      <div key={bg} className=\"flex items-center gap-2\">\n        {AVATAR_COLORS.map((c) => (\n          <Avatar key={c} name={`${c} ${bg}`} color={c} background={bg} />\n        ))}\n        <Avatar name=\"Unknown person\" icon={<User01 />} background={bg} />\n        <Avatar name=\"Rounded avatar\" shape=\"rounded\" background={bg} />\n      </div>\n    ))}\n  </div>\n);"
+      },
+      {
+        "id": "primitives-avatar--sizes",
+        "name": "Sizes",
+        "snippet": "const Sizes = () => (\n  <div className=\"flex items-center gap-2\">\n    {SIZES.map((s) => (\n      <Avatar key={s} name=\"Bessie Cooper\" size={s} />\n    ))}\n  </div>\n);"
+      },
+      {
+        "id": "primitives-avatar--colour-from-name",
+        "name": "Colour From Name",
+        "snippet": "const ColourFromName = () => (\n  <div className=\"flex items-center gap-2\">\n    {NAMES.map((n) => (\n      <Avatar key={n} name={n} />\n    ))}\n  </div>\n);"
+      },
+      {
+        "id": "primitives-avatar--picture",
+        "name": "Picture",
+        "snippet": "const Picture = () => <Avatar\n    name=\"Darlene Robertson\"\n    src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkqPtfDwAEgwG/mKqVvQAAAABJRU5ErkJggg==\" />;"
+      },
+      {
+        "id": "primitives-avatar--broken-picture",
+        "name": "Broken Picture",
+        "snippet": "const BrokenPicture = () => <Avatar name=\"Darlene Robertson\" src=\"data:image/png;base64,broken\" />;"
+      }
+    ]
+  },
+  {
+    "name": "Badge",
+    "import": "import { Badge } from '@honey-ds/ui';",
+    "figmaNode": "279:4301",
+    "summary": "Honey DS non-interactive status label: 4 fill styles, 15 tones, 4 sizes, pill or rounded.",
+    "useWhen": "Showing a status, count or category next to content (e.g. \"Open\", \"VIP\", \"3 new\").",
+    "avoidWhen": "Removable or user-created labels (use Tag) or anything clickable (use Button).",
+    "props": [
+      {
+        "name": "variant",
+        "type": "(typeof BADGE_VARIANTS)[number]",
+        "required": false,
+        "default": "'subtle'",
+        "description": "Fill style (Figma `Variant`)."
+      },
+      {
+        "name": "tone",
+        "type": "(typeof BADGE_TONES)[number]",
+        "required": false,
+        "default": "'neutral'",
+        "description": "Palette family (Figma `Tone`)."
+      },
+      {
+        "name": "icon",
+        "type": "ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Leading icon. Pass an @honey-ds/icons component element."
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Badge label. Omit for an icon-only badge (then give it an aria-label)."
+      },
+      {
+        "name": "size",
+        "type": "unknown",
+        "required": false,
+        "default": "'md'",
+        "description": ""
+      },
+      {
+        "name": "shape",
+        "type": "unknown",
+        "required": false,
+        "default": "'pill'",
+        "description": ""
+      }
+    ],
+    "stories": [
+      {
+        "id": "primitives-badge--default",
+        "name": "Default",
+        "snippet": "const Default = () => <Badge>Badge</Badge>;"
+      },
+      {
+        "id": "primitives-badge--all-variants",
+        "name": "All Variants",
+        "snippet": "const AllVariants = (args) => (\n  <div className=\"grid grid-cols-4 gap-x-4 gap-y-2\">\n    {BADGE_VARIANTS.map((v) => (\n      <span key={v} className=\"text-12 leading-18 font-medium text-neutral-soft\">\n        {v}\n      </span>\n    ))}\n    {BADGE_TONES.map((t) =>\n      BADGE_VARIANTS.map((v) => (\n        <div key={`${t}-${v}`}>\n          <Badge {...args} tone={t} variant={v} icon={<CheckCircle />}>\n            {t}\n          </Badge>\n        </div>\n      )),\n    )}\n  </div>\n);"
+      },
+      {
+        "id": "primitives-badge--sizes",
+        "name": "Sizes",
+        "snippet": "const Sizes = (args) => (\n  <div className=\"flex flex-col gap-3\">\n    {(['pill', 'rounded'] as const).map((shape) => (\n      <div key={shape} className=\"flex flex-wrap items-center gap-3\">\n        {SIZES.map((s) => (\n          <Badge key={s} {...args} size={s} shape={shape} tone=\"info\" icon={<CheckCircle />}>\n            {`${shape} ${s}`}\n          </Badge>\n        ))}\n      </div>\n    ))}\n  </div>\n);"
+      },
+      {
+        "id": "primitives-badge--states",
+        "name": "States",
+        "snippet": "const States = () => <div className=\"flex flex-wrap items-center gap-3\">\n    <Badge tone=\"success\">Resolved\n              </Badge>\n    <Badge tone=\"warning\" variant=\"outline\">Pending\n              </Badge>\n    <Badge tone=\"error\" variant=\"solid\">Breached\n              </Badge>\n    <Badge tone=\"neutral\" variant=\"ghost\">Closed\n              </Badge>\n    <Badge tone=\"violet\" icon={<CheckCircle />} aria-label=\"Verified\" role=\"img\">\n        {null}\n    </Badge>\n</div>;"
+      }
+    ]
+  },
+  {
+    "name": "Button",
+    "import": "import { Button } from '@honey-ds/ui';",
+    "figmaNode": "65:178",
+    "summary": "Honey DS button with 9 variants and 5 sizes.",
+    "useWhen": "Any clickable action. Primary for the main action of a view; secondary/filled for the rest; tertiary for low emphasis.",
+    "avoidWhen": "Navigation between pages (use a link) or icon-only actions (use IconButton).",
+    "props": [
+      {
+        "name": "leadingIcon",
+        "type": "ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Icon before the label. Pass an @honey-ds/icons component element."
+      },
+      {
+        "name": "trailingIcon",
+        "type": "ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Icon after the label."
+      },
+      {
+        "name": "variant",
+        "type": "unknown",
+        "required": false,
+        "default": "'primary'",
+        "description": ""
+      },
+      {
+        "name": "size",
+        "type": "unknown",
+        "required": false,
+        "default": "'md'",
+        "description": ""
+      },
+      {
+        "name": "underline",
+        "type": "unknown",
+        "required": false,
+        "default": "false",
+        "description": ""
+      }
+    ],
+    "stories": [
+      {
+        "id": "primitives-button--default",
+        "name": "Default",
+        "snippet": "const Default = () => <Button onClick={fn()}>Send reply</Button>;"
+      },
+      {
+        "id": "primitives-button--all-variants",
+        "name": "All Variants",
+        "snippet": "const AllVariants = args => <div className=\"flex flex-wrap items-center gap-3\">\n    {VARIANTS.map((v) => (\n      <Button key={v} {...args} variant={v}>\n        {v}\n      </Button>\n    ))}\n    <span className=\"rounded-6 bg-static-black p-2\">\n        <Button onClick={fn()} variant=\"linkReverse\">linkReverse\n                    </Button>\n    </span>\n</div>;"
+      },
+      {
+        "id": "primitives-button--sizes",
+        "name": "Sizes",
+        "snippet": "const Sizes = (args) => (\n  <div className=\"flex flex-wrap items-center gap-3\">\n    {SIZES.map((s) => (\n      <Button key={s} {...args} size={s} leadingIcon={<Plus />}>\n        {s}\n      </Button>\n    ))}\n  </div>\n);"
+      },
+      {
+        "id": "primitives-button--with-icons",
+        "name": "With Icons",
+        "snippet": "const WithIcons = () => <Button onClick={fn()} leadingIcon={<Plus />} trailingIcon={<ArrowRight />}>Send reply</Button>;"
+      },
+      {
+        "id": "primitives-button--disabled",
+        "name": "Disabled",
+        "snippet": "const Disabled = (args) => (\n  <div className=\"flex flex-wrap items-center gap-3\">\n    {VARIANTS.map((v) => (\n      <Button key={v} {...args} variant={v} disabled>\n        {v}\n      </Button>\n    ))}\n  </div>\n);"
+      },
+      {
+        "id": "primitives-button--destructive-with-icon",
+        "name": "Destructive With Icon",
+        "snippet": "const DestructiveWithIcon = () => <Button onClick={fn()} variant=\"destructive\" leadingIcon={<Trash01 />}>Delete draft</Button>;"
+      },
+      {
+        "id": "primitives-button--states",
+        "name": "States",
+        "snippet": "const States = (args) => (\n  <div className=\"grid grid-cols-5 items-center gap-3\">\n    {FORCED_STATES.map((s) => (\n      <span key={s} className=\"text-12 leading-18 text-neutral-soft\">\n        {s}\n      </span>\n    ))}\n    {VARIANTS.map((v) =>\n      FORCED_STATES.map((s) => (\n        // The addon forces the state on the element its selector matches, so the class goes on\n        // the button itself, not a wrapper.\n        <Button\n          key={`${v}-${s}`}\n          {...args}\n          className={`state-${s} justify-self-start`}\n          variant={v}\n          disabled={s === 'disabled'}\n        >\n          {v}\n        </Button>\n      )),\n    )}\n  </div>\n);"
+      }
+    ]
+  },
+  {
+    "name": "ConversationList",
+    "import": "import { ConversationList } from '@honey-ds/ui';",
+    "figmaNode": "5485:2399",
+    "summary": "The conversation list: one-line rows (unread dot, sender, subject, SLA/AI/attachment icons, time) in a virtualized listbox with roving focus. Pass rows as data; onEndReached loads the next page.",
+    "useWhen": "Any queue of conversations in the list pane (My work, Unassigned, Mine, a team member, a tag, Closed). Render ConversationRowSkeleton ×12 while loading.",
+    "avoidWhen": "Showing one conversation in detail (use the conversation header and timeline) or a non-conversation list (use a plain list or table).",
+    "props": [
+      {
+        "name": "aria-label",
+        "type": "string",
+        "required": true,
+        "default": null,
+        "description": ""
+      },
+      {
+        "name": "rows",
+        "type": "unknown",
+        "required": true,
+        "default": null,
+        "description": ""
+      },
+      {
+        "name": "value",
+        "type": "string | null",
+        "required": true,
+        "default": null,
+        "description": "Id of the selected (open) conversation."
+      },
+      {
+        "name": "onValueChange",
+        "type": "(id: string) => void",
+        "required": true,
+        "default": null,
+        "description": ""
+      },
+      {
+        "name": "onPreview",
+        "type": "(id: string) => void",
+        "required": false,
+        "default": null,
+        "description": "A row was pointed at or focused, so it may be opened next: a cue to start loading it."
+      },
+      {
+        "name": "onEndReached",
+        "type": "() => void",
+        "required": false,
+        "default": null,
+        "description": "Called when the last rows scroll into view: load the next page."
+      },
+      {
+        "name": "footer",
+        "type": "ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Rendered after the rows inside the scroller, e.g. a skeleton while the next page loads."
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": ""
+      }
+    ],
+    "stories": [
+      {
+        "id": "composites-conversationlist--default",
+        "name": "Default",
+        "snippet": "const Default = () => <Example onValueChange={fn()} />;"
+      },
+      {
+        "id": "composites-conversationlist--no-selection",
+        "name": "No Selection",
+        "snippet": "const NoSelection = () => <Example initial={null} />;"
+      },
+      {
+        "id": "composites-conversationlist--loading",
+        "name": "Loading",
+        "snippet": "const Loading = () => (\n  <div\n    aria-busy=\"true\"\n    aria-label=\"Loading conversations\"\n    role=\"status\"\n    className=\"w-(--hds-layout-list) border border-w-14 border-neutral-subtle\"\n  >\n    {Array.from({ length: 12 }, (_, i) => (\n      <ConversationRowSkeleton key={i} />\n    ))}\n  </div>\n);"
+      },
+      {
+        "id": "composites-conversationlist--states",
+        "name": "States",
+        "snippet": "const States = () => (\n  <ConversationList\n    aria-label=\"States\"\n    value=\"s-selected\"\n    onValueChange={() => {}}\n    rows={[\n      { ...ROWS[2]!, id: 's-rest', sender: 'Rest' },\n      { ...ROWS[2]!, id: 's-hover', sender: 'Hover', className: 'state-hover' },\n      { ...ROWS[2]!, id: 's-focus', sender: 'Focus', className: 'state-focus' },\n      { ...ROWS[0]!, id: 's-unread', sender: 'Unread' },\n      { ...ROWS[2]!, id: 's-selected', sender: 'Selected' },\n      { ...ROWS[2]!, id: 's-selected-hover', sender: 'Selected hover', className: 'state-hover' },\n    ]}\n    className=\"h-(--hds-layout-list) w-(--hds-layout-list) border border-w-14 border-neutral-subtle\"\n  />\n);"
+      },
+      {
+        "id": "composites-conversationlist--large",
+        "name": "Large",
+        "snippet": "const Large = () => <Example initial={null} rows={MANY} onEndReached={fn()} />;"
+      }
+    ]
+  },
+  {
+    "name": "Dialog",
+    "import": "import { Dialog } from '@honey-ds/ui';",
+    "figmaNode": "7433:193",
+    "summary": "Honey DS modal on Base UI Dialog: centred 440px surface with a body (optional error/warning/success/info icon chip, horizontal or vertical) and a footer of actions.",
+    "useWhen": "Confirming a destructive or irreversible action, or a short focused task that must be finished or cancelled before going back.",
+    "avoidWhen": "Long forms or side content next to the page (use Sheet), passive messages (use Toast), or anything the user should not be blocked by.",
+    "props": [],
+    "stories": [
+      {
+        "id": "primitives-dialog--default",
+        "name": "Default",
+        "snippet": "const Default = () => <ConfirmDialog status=\"error\" />;"
+      },
+      {
+        "id": "primitives-dialog--error-status",
+        "name": "Error",
+        "snippet": "const ErrorStatus = () => <ConfirmDialog status=\"error\" defaultOpen />;"
+      },
+      {
+        "id": "primitives-dialog--warning-status",
+        "name": "Warning",
+        "snippet": "const WarningStatus = () => <ConfirmDialog status=\"warning\" defaultOpen />;"
+      },
+      {
+        "id": "primitives-dialog--vertical",
+        "name": "Vertical",
+        "snippet": "const Vertical = () => <ConfirmDialog status=\"success\" align=\"vertical\" defaultOpen />;"
+      },
+      {
+        "id": "primitives-dialog--footer-with-leading",
+        "name": "Footer With Leading",
+        "snippet": "const FooterWithLeading = () => (\n  <Dialog defaultOpen>\n    <DialogTrigger render={<Button variant=\"secondary\">Share view</Button>} />\n    <DialogContent>\n      <DialogBody status=\"info\">\n        <DialogHeader>\n          <DialogTitle>Share this view with your team?</DialogTitle>\n          <DialogDescription>Teammates can see it in their sidebar.</DialogDescription>\n        </DialogHeader>\n      </DialogBody>\n      <DialogFooter\n        leading={\n          <>\n            <InfoCircle aria-hidden className=\"size-4 shrink-0 text-fg-neutral-bold-soft\" />\n            <span>Read before proceeding.</span>\n          </>\n        }\n      >\n        <DialogClose render={<Button variant=\"secondary\" size=\"sm\" />}>Cancel</DialogClose>\n        <DialogClose render={<Button size=\"sm\" />}>Share</DialogClose>\n      </DialogFooter>\n    </DialogContent>\n  </Dialog>\n);"
+      },
+      {
+        "id": "primitives-dialog--stretch-footer",
+        "name": "Stretch Footer",
+        "snippet": "const StretchFooter = () => (\n  <Dialog defaultOpen>\n    <DialogTrigger render={<Button variant=\"secondary\">Leave</Button>} />\n    <DialogContent>\n      <DialogBody>\n        <DialogHeader>\n          <DialogTitle>Discard your reply?</DialogTitle>\n          <DialogDescription>The draft will be deleted.</DialogDescription>\n        </DialogHeader>\n      </DialogBody>\n      <DialogFooter stretch>\n        <DialogClose render={<Button variant=\"secondary\" size=\"sm\" />}>Keep editing</DialogClose>\n        <DialogClose render={<Button variant=\"destructive\" size=\"sm\" />}>Discard</DialogClose>\n      </DialogFooter>\n    </DialogContent>\n  </Dialog>\n);"
+      }
+    ]
+  },
+  {
+    "name": "DropdownMenu",
+    "import": "import { DropdownMenu } from '@honey-ds/ui';",
+    "figmaNode": "6003:8485",
+    "summary": "Honey DS dropdown menu on Base UI Menu: items with icon/shortcut, checkbox and radio items, groups, separators, submenus and an optional title header.",
+    "useWhen": "A list of actions or options revealed from a button (row actions, overflow menus, view settings).",
+    "avoidWhen": "Choosing a form value (use a select/combobox) or primary navigation.",
+    "props": [],
+    "stories": [
+      {
+        "id": "primitives-dropdownmenu--default",
+        "name": "Default",
+        "snippet": "const Default = () => <DropdownMenu onItemClick={fn()}>\n    <DropdownMenuTrigger\n        render={<Button variant=\"secondary\" size=\"sm\" trailingIcon={<ChevronDown />} />}>Actions\n              </DropdownMenuTrigger>\n    <DropdownMenuContent>\n        <DropdownMenuItem\n            icon={<Edit01 />}\n            trailing={<DropdownMenuShortcut>E</DropdownMenuShortcut>}>Edit\n                    </DropdownMenuItem>\n        <DropdownMenuItem\n            icon={<Archive />}\n            onClick={onItemClick}\n            trailing={<DropdownMenuShortcut>A</DropdownMenuShortcut>}>Archive\n                    </DropdownMenuItem>\n        <DropdownMenuItem icon={<Copy01 />}>Copy link</DropdownMenuItem>\n        <DropdownMenuSeparator />\n        <DropdownMenuItem icon={<Trash01 />} variant=\"destructive\">Delete\n                    </DropdownMenuItem>\n    </DropdownMenuContent>\n</DropdownMenu>;"
+      },
+      {
+        "id": "primitives-dropdownmenu--all-states",
+        "name": "All States",
+        "snippet": "const AllStates = () => (\n  <div className=\"min-h-160 min-w-120\">\n    <StatesMenu />\n  </div>\n);"
+      },
+      {
+        "id": "primitives-dropdownmenu--submenu",
+        "name": "Submenu",
+        "snippet": "const Submenu = () => (\n  <DropdownMenu>\n    <DropdownMenuTrigger\n      render={<Button variant=\"secondary\" size=\"sm\" trailingIcon={<ChevronDown />} />}\n    >\n      More\n    </DropdownMenuTrigger>\n    <DropdownMenuContent>\n      <DropdownMenuItem icon={<Copy01 />}>Duplicate</DropdownMenuItem>\n      <DropdownMenuSub>\n        <DropdownMenuSubTrigger icon={<UserPlus01 />}>Assign to</DropdownMenuSubTrigger>\n        <DropdownMenuSubContent>\n          <DropdownMenuItem>Priya</DropdownMenuItem>\n          <DropdownMenuItem>Marcus</DropdownMenuItem>\n        </DropdownMenuSubContent>\n      </DropdownMenuSub>\n    </DropdownMenuContent>\n  </DropdownMenu>\n);"
+      }
+    ]
+  },
+  {
+    "name": "EmptyState",
+    "import": "import { EmptyState } from '@honey-ds/ui';",
+    "figmaNode": "7435:1535",
+    "summary": "Honey DS empty state: circular icon, title, optional description and one optional primary action; sm, md and lg.",
+    "useWhen": "A list, search or panel has nothing to show (empty inbox, no search results, no notes yet).",
+    "avoidWhen": "Errors (use a Banner or Toast) or loading (use Skeleton); never as a placeholder for content that is still arriving.",
+    "props": [
+      {
+        "name": "title",
+        "type": "ReactNode",
+        "required": true,
+        "default": null,
+        "description": "The main line, e.g. \"No conversations\"."
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Optional supporting line (Figma `subheading`)."
+      },
+      {
+        "name": "icon",
+        "type": "ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Icon inside the circle. Defaults to the search glyph Figma uses; pass an @honey-ds/icons element."
+      },
+      {
+        "name": "actionLabel",
+        "type": "ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Label of the single primary action (Figma `action`). Rendered only with `onAction`."
+      },
+      {
+        "name": "onAction",
+        "type": "() => void",
+        "required": false,
+        "default": null,
+        "description": ""
+      },
+      {
+        "name": "headingLevel",
+        "type": "2 | 3 | 4",
+        "required": false,
+        "default": null,
+        "description": "Render the title as a heading (h2–h4) when the empty state is the main content of a region."
+      },
+      {
+        "name": "size",
+        "type": "unknown",
+        "required": false,
+        "default": "'sm'",
+        "description": ""
+      }
+    ],
+    "stories": [
+      {
+        "id": "primitives-emptystate--default",
+        "name": "Default",
+        "snippet": "const Default = () => <EmptyState\n    title=\"No conversations found\"\n    description=\"Nothing matches “refund”. Try another search or clear the filters.\"\n    actionLabel=\"Clear filters\"\n    onAction={fn()} />;"
+      },
+      {
+        "id": "primitives-emptystate--sizes",
+        "name": "Sizes",
+        "snippet": "const Sizes = (args) => (\n  <div className=\"flex flex-col items-center gap-10\">\n    {SIZES.map((s) => (\n      <EmptyState key={s} {...args} size={s} />\n    ))}\n  </div>\n);"
+      },
+      {
+        "id": "primitives-emptystate--title-only",
+        "name": "Title Only",
+        "snippet": "const TitleOnly = () => <EmptyState\n    title=\"No conversations found\"\n    description={undefined}\n    actionLabel={undefined}\n    onAction={undefined} />;"
+      },
+      {
+        "id": "primitives-emptystate--custom-icon-and-heading",
+        "name": "Custom Icon And Heading",
+        "snippet": "const CustomIconAndHeading = () => <EmptyState\n    title=\"Inbox zero\"\n    description=\"Every conversation assigned to you is handled.\"\n    actionLabel={undefined}\n    onAction={undefined}\n    size=\"md\"\n    icon={<Inbox01 />}\n    headingLevel={2} />;"
+      }
+    ]
+  },
+  {
+    "name": "IconButton",
+    "import": "import { IconButton } from '@honey-ds/ui';",
+    "figmaNode": "65:178",
+    "summary": "Square, icon-only Button with a required aria-label. Same variants and sizes.",
+    "useWhen": "Toolbar and row actions where an icon is self-explanatory (more, close, delete, add). Pair with a Tooltip that repeats the label.",
+    "avoidWhen": "The action needs words to be understood, or is the main action of a view (use Button).",
+    "props": [
+      {
+        "name": "variant",
+        "type": "'primary' | 'secondary' | 'tertiary' | 'destructive' | 'filled'",
+        "required": false,
+        "default": "'tertiary'",
+        "description": "Surface variants only: a link-style icon button has no visible target."
+      },
+      {
+        "name": "icon",
+        "type": "ReactNode",
+        "required": true,
+        "default": null,
+        "description": "The icon. Pass an @honey-ds/icons component element."
+      },
+      {
+        "name": "aria-label",
+        "type": "string",
+        "required": true,
+        "default": null,
+        "description": "Required: an icon-only button has no visible text, so this is its accessible name."
+      },
+      {
+        "name": "size",
+        "type": "unknown",
+        "required": false,
+        "default": "'md'",
+        "description": ""
+      }
+    ],
+    "stories": [
+      {
+        "id": "primitives-iconbutton--default",
+        "name": "Default",
+        "snippet": "const Default = () => <IconButton icon={<DotsHorizontal />} aria-label=\"More actions\" onClick={fn()} />;"
+      },
+      {
+        "id": "primitives-iconbutton--all-variants",
+        "name": "All Variants",
+        "snippet": "const AllVariants = args => <div className=\"flex items-center gap-3\">\n    {VARIANTS.map((v) => (\n      <IconButton key={v} {...args} variant={v} icon={<Plus />} aria-label={`Add (${v})`} />\n    ))}\n    <IconButton\n        onClick={fn()}\n        variant=\"destructive\"\n        icon={<Trash01 />}\n        aria-label=\"Delete\" />\n</div>;"
+      },
+      {
+        "id": "primitives-iconbutton--sizes",
+        "name": "Sizes",
+        "snippet": "const Sizes = (args) => (\n  <div className=\"flex items-center gap-3\">\n    {SIZES.map((s) => (\n      <IconButton key={s} {...args} size={s} aria-label={`More actions (${s})`} />\n    ))}\n  </div>\n);"
+      },
+      {
+        "id": "primitives-iconbutton--states",
+        "name": "States",
+        "snippet": "const States = (args) => (\n  <div className=\"grid grid-cols-5 items-center gap-3\">\n    {FORCED_STATES.map((s) => (\n      <span key={s} className=\"text-12 leading-18 text-neutral-soft\">\n        {s}\n      </span>\n    ))}\n    {VARIANTS.map((v) =>\n      FORCED_STATES.map((s) => (\n        <IconButton\n          key={`${v}-${s}`}\n          {...args}\n          className={`state-${s} justify-self-start`}\n          variant={v}\n          disabled={s === 'disabled'}\n          aria-label={`More actions (${v}, ${s})`}\n        />\n      )),\n    )}\n  </div>\n);"
+      }
+    ]
+  },
+  {
+    "name": "Input",
+    "import": "import { Input } from '@honey-ds/ui';",
+    "figmaNode": "185:378",
+    "summary": "Honey DS single-line text field (3 sizes) with optional leading/trailing icons and a search variant.",
+    "useWhen": "Free-text entry of a single line: names, emails, filters. variant=\"search\" for search boxes (adds icon + clear button).",
+    "avoidWhen": "Multi-line text (use Textarea) or picking from a fixed list (use a select/combobox).",
+    "props": [
+      {
+        "name": "variant",
+        "type": "'text' | 'search'",
+        "required": false,
+        "default": "'text'",
+        "description": "`search` adds the search icon, `type=\"search\"` and a clear button once the field has a value."
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Class for the field shell (border, background, size)."
+      },
+      {
+        "name": "inputClassName",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Class for the native <input>."
+      },
+      {
+        "name": "ref",
+        "type": "Ref<HTMLInputElement>",
+        "required": false,
+        "default": null,
+        "description": ""
+      },
+      {
+        "name": "leadingIcon",
+        "type": "ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Icon before the value. Defaults to the search icon for `variant=\"search\"`."
+      },
+      {
+        "name": "trailingIcon",
+        "type": "ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Icon after the value (hidden while the search clear button shows)."
+      },
+      {
+        "name": "clearLabel",
+        "type": "string",
+        "required": false,
+        "default": "'Clear search'",
+        "description": "Accessible name of the search clear button."
+      },
+      {
+        "name": "onClear",
+        "type": "() => void",
+        "required": false,
+        "default": null,
+        "description": "Called after the search clear button empties the field."
+      },
+      {
+        "name": "size",
+        "type": "unknown",
+        "required": false,
+        "default": "'sm'",
+        "description": ""
+      }
+    ],
+    "stories": [
+      {
+        "id": "primitives-input--default",
+        "name": "Default",
+        "snippet": "const Default = () => <Input aria-label=\"Email address\" placeholder=\"name@company.com\" onChange={fn()} />;"
+      },
+      {
+        "id": "primitives-input--all-variants",
+        "name": "All Variants",
+        "snippet": "const AllVariants = () => <div className=\"flex flex-col gap-3\">\n    <Input placeholder=\"name@company.com\" onChange={fn()} aria-label=\"Plain\" />\n    <Input\n        placeholder=\"name@company.com\"\n        onChange={fn()}\n        aria-label=\"With leading icon\"\n        leadingIcon={<Mail01 />} />\n    <Input\n        placeholder=\"name@company.com\"\n        onChange={fn()}\n        aria-label=\"With both icons\"\n        leadingIcon={<Mail01 />}\n        trailingIcon={<InfoCircle />} />\n    <Input onChange={fn()} variant=\"search\" aria-label=\"Search\" placeholder=\"Search\" />\n    <Input\n        onChange={fn()}\n        variant=\"search\"\n        aria-label=\"Search filled\"\n        placeholder=\"Search\"\n        defaultValue=\"refund policy\" />\n</div>;"
+      },
+      {
+        "id": "primitives-input--sizes",
+        "name": "Sizes",
+        "snippet": "const Sizes = (args) => (\n  <div className=\"flex flex-col gap-3\">\n    {SIZES.map((s) => (\n      <Input\n        key={s}\n        {...args}\n        size={s}\n        aria-label={`Size ${s}`}\n        placeholder={`Size ${s}`}\n        leadingIcon={<Mail01 />}\n      />\n    ))}\n  </div>\n);"
+      },
+      {
+        "id": "primitives-input--states",
+        "name": "States",
+        "snippet": "const States = () => <div className=\"flex flex-col gap-3\">\n    <Input onChange={fn()} aria-label=\"Default\" placeholder=\"Default\" />\n    <Input\n        placeholder=\"name@company.com\"\n        onChange={fn()}\n        aria-label=\"Filled\"\n        defaultValue=\"ana@hiver.com\" />\n    <Input\n        placeholder=\"name@company.com\"\n        onChange={fn()}\n        aria-label=\"Error\"\n        defaultValue=\"ana@\"\n        aria-invalid />\n    <Input onChange={fn()} aria-label=\"Disabled\" placeholder=\"Disabled\" disabled />\n    <Input\n        onChange={fn()}\n        aria-label=\"Disabled search\"\n        variant=\"search\"\n        placeholder=\"Search\"\n        disabled />\n</div>;"
+      },
+      {
+        "id": "primitives-input--interaction-states",
+        "name": "Interaction States",
+        "snippet": "const InteractionStates = () => <div className=\"flex flex-col gap-3\">\n    <Input\n        onChange={fn()}\n        className=\"state-hover\"\n        aria-label=\"Hover\"\n        placeholder=\"Hover\" />\n    <Input\n        onChange={fn()}\n        className=\"state-focus\"\n        aria-label=\"Focus\"\n        placeholder=\"Focus\" />\n    <Input\n        placeholder=\"name@company.com\"\n        onChange={fn()}\n        className=\"state-hover\"\n        aria-label=\"Error hover\"\n        defaultValue=\"Invalid\"\n        aria-invalid />\n    <Input\n        placeholder=\"name@company.com\"\n        onChange={fn()}\n        className=\"state-focus\"\n        aria-label=\"Error focus\"\n        defaultValue=\"Invalid\"\n        aria-invalid />\n</div>;"
+      },
+      {
+        "id": "primitives-input--with-label",
+        "name": "With Label",
+        "snippet": "const WithLabel = () => <div className=\"flex flex-col gap-1.5\">\n    <label\n        htmlFor=\"work-email\"\n        className=\"text-14 leading-20 font-medium text-neutral-default\">Work email\n              </label>\n    <Input\n        placeholder=\"name@company.com\"\n        onChange={fn()}\n        aria-label={undefined}\n        id=\"work-email\"\n        size=\"md\" />\n</div>;"
+      },
+      {
+        "id": "primitives-input--search",
+        "name": "Search",
+        "snippet": "const Search = () => <Input\n    aria-label=\"Search conversations\"\n    placeholder=\"Search\"\n    onChange={fn()}\n    variant=\"search\"\n    onClear={fn()} />;"
+      }
+    ]
+  },
+  {
+    "name": "ResizablePanelGroup",
+    "import": "import { ResizablePanelGroup } from '@honey-ds/ui';",
+    "figmaNode": null,
+    "summary": "Resizable panes (react-resizable-panels): a group of panels with keyboard-operable separators.",
+    "useWhen": "The app layout: list, conversation and side panel widths the user can adjust and keep.",
+    "avoidWhen": "Small layouts inside a component (use flex or grid); anything that should not be user-sized.",
+    "props": [],
+    "stories": [
+      {
+        "id": "primitives-resizable--app-layout",
+        "name": "App Layout",
+        "snippet": "const AppLayout = () => (\n  <div className=\"h-96 w-full border border-neutral-soft\">\n    <ResizablePanelGroup orientation=\"horizontal\">\n      <ResizablePanel id=\"list\" {...LIST}>\n        <Pane label=\"Conversation list\" />\n      </ResizablePanel>\n      <ResizableHandle aria-label=\"Resize conversation list\" />\n      <ResizablePanel id=\"conversation\">\n        <Pane label=\"Conversation\" />\n      </ResizablePanel>\n      <ResizableHandle aria-label=\"Resize side panel\" />\n      <ResizablePanel id=\"side\" {...SIDE}>\n        <Pane label=\"Side panel\" />\n      </ResizablePanel>\n    </ResizablePanelGroup>\n  </div>\n);"
+      },
+      {
+        "id": "primitives-resizable--gap-handles",
+        "name": "Gap Handles",
+        "snippet": "const GapHandles = () => (\n  <div className=\"h-96 w-full bg-neutral-soft p-2\">\n    <ResizablePanelGroup>\n      <ResizablePanel defaultSize=\"30\" minSize=\"20\">\n        <div className=\"h-full rounded-16 bg-neutral-white p-4 shadow-sm\">List</div>\n      </ResizablePanel>\n      <ResizableHandle variant=\"gap\" aria-label=\"Resize list\" />\n      <ResizablePanel defaultSize=\"70\">\n        <div className=\"h-full rounded-16 bg-neutral-white p-4 shadow-sm\">Conversation</div>\n      </ResizablePanel>\n    </ResizablePanelGroup>\n  </div>\n);"
+      },
+      {
+        "id": "primitives-resizable--vertical",
+        "name": "Vertical",
+        "snippet": "const Vertical = () => (\n  <div className=\"h-96 w-full border border-neutral-soft\">\n    <ResizablePanelGroup orientation=\"vertical\">\n      <ResizablePanel defaultSize=\"60\">\n        <Pane label=\"Thread\" />\n      </ResizablePanel>\n      <ResizableHandle aria-label=\"Resize composer\" />\n      <ResizablePanel defaultSize=\"40\" minSize=\"20\">\n        <Pane label=\"Composer\" />\n      </ResizablePanel>\n    </ResizablePanelGroup>\n  </div>\n);"
+      }
+    ]
+  },
+  {
+    "name": "ScrollArea",
+    "import": "import { ScrollArea } from '@honey-ds/ui';",
+    "figmaNode": null,
+    "summary": "Scrollable region with thin token-coloured overlay scrollbars, native scrolling and a focusable viewport.",
+    "useWhen": "Any fixed-height region whose content can overflow: list panes, side panels, menus with many items.",
+    "avoidWhen": "Whole-page scrolling (let the document scroll) or long lists of many hundreds of rows (virtualise them).",
+    "props": [
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": false,
+        "default": null,
+        "description": ""
+      },
+      {
+        "name": "orientation",
+        "type": "'vertical' | 'horizontal' | 'both'",
+        "required": false,
+        "default": "'vertical'",
+        "description": "Which scrollbars to render. Content that overflows on the other axis is clipped."
+      },
+      {
+        "name": "aria-label",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Accessible name for the focusable viewport."
+      },
+      {
+        "name": "viewportClassName",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Class for the viewport (e.g. a max height). The root takes `className`."
+      }
+    ],
+    "stories": [
+      {
+        "id": "primitives-scrollarea--vertical",
+        "name": "Vertical",
+        "snippet": "const Vertical = () => (\n  <ScrollArea\n    aria-label=\"Conversations\"\n    className=\"h-64 w-72 rounded-8 border border-neutral-soft\"\n  >\n    <ul className=\"flex flex-col\">\n      {ROWS.map((r) => (\n        <li\n          key={r}\n          className=\"border-b border-neutral-subtle px-3 py-2 text-14 leading-20 text-neutral-default\"\n        >\n          {r}\n        </li>\n      ))}\n    </ul>\n  </ScrollArea>\n);"
+      },
+      {
+        "id": "primitives-scrollarea--horizontal",
+        "name": "Horizontal",
+        "snippet": "const Horizontal = () => (\n  <ScrollArea\n    orientation=\"horizontal\"\n    aria-label=\"Tags\"\n    className=\"w-72 rounded-8 border border-neutral-soft\"\n  >\n    <div className=\"flex w-max gap-2 p-3\">\n      {ROWS.slice(0, 16).map((r) => (\n        <span\n          key={r}\n          className=\"rounded-6 bg-neutral-default px-2 py-1 text-13 leading-19 text-neutral-default\"\n        >\n          {r}\n        </span>\n      ))}\n    </div>\n  </ScrollArea>\n);"
+      },
+      {
+        "id": "primitives-scrollarea--both",
+        "name": "Both",
+        "snippet": "const Both = () => (\n  <ScrollArea\n    orientation=\"both\"\n    aria-label=\"Wide table\"\n    className=\"h-48 w-72 rounded-8 border border-neutral-soft\"\n  >\n    <div className=\"grid w-max grid-cols-8 gap-2 p-3\">\n      {Array.from({ length: 96 }, (_, i) => (\n        <span\n          key={i}\n          className=\"rounded-4 bg-neutral-soft px-3 py-2 text-13 leading-19 text-neutral-default\"\n        >\n          Cell {i + 1}\n        </span>\n      ))}\n    </div>\n  </ScrollArea>\n);"
+      }
+    ]
+  },
+  {
+    "name": "ShadowRoot",
+    "import": "import { ShadowRoot } from '@honey-ds/ui';",
+    "figmaNode": null,
+    "summary": "Renders library components inside a shadow root (for embedding in a host page), with popups portalled into the same root and light/dark following the page.",
+    "useWhen": "Mounting UI inside another app’s page where its CSS must not leak in or out.",
+    "avoidWhen": "Normal screens in apps/web: they render in the document.",
+    "props": [
+      {
+        "name": "css",
+        "type": "string",
+        "required": true,
+        "default": null,
+        "description": ""
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true,
+        "default": null,
+        "description": ""
+      }
+    ],
+    "stories": [
+      {
+        "id": "foundations-shadow-root--components",
+        "name": "Components",
+        "snippet": "const Components = () => <ShadowRoot css={css}>\n    <div className=\"flex flex-col gap-3\">\n        <Input aria-label=\"Search\" placeholder=\"Search conversations\" />\n        <div className=\"flex items-center gap-2\">\n            <Button>Reply</Button>\n            <Badge>Open</Badge>\n            <TooltipProvider>\n                <Tooltip>\n                    <TooltipTrigger render={<Button variant=\"secondary\">Hint</Button>} />\n                    <TooltipContent side=\"right\">Shown inside the shadow root</TooltipContent>\n                </Tooltip>\n            </TooltipProvider>\n        </div>\n        <div\n            data-testid=\"dashed\"\n            className=\"border border-dashed border-neutral-default p-2\">border-dashed must beat the compat defaults\n                    </div>\n    </div>\n</ShadowRoot>;"
+      },
+      {
+        "id": "foundations-shadow-root--host-without-our-css",
+        "name": "Host Without Our Css",
+        "snippet": "const HostWithoutOurCss = () => <p>Checks the compat CSS in a blank iframe (see the play function).</p>;"
+      }
+    ]
+  },
+  {
+    "name": "Sheet",
+    "import": "import { Sheet } from '@honey-ds/ui';",
+    "figmaNode": "8748:1288",
+    "summary": "Honey DS side drawer on Base UI Dialog: a right-anchored, inset panel (md 560 / lg 760) with a fixed header and close button, a scrolling body and an optional footer.",
+    "useWhen": "A longer task or detail view that keeps the page in context: editing a view, creating a rule, viewing a record.",
+    "avoidWhen": "Short confirmations (use Dialog), or panels that live in the layout permanently (use the app layout’s side panel).",
+    "props": [],
+    "stories": [
+      {
+        "id": "primitives-sheet--default",
+        "name": "Default",
+        "snippet": "const Default = () => <EditViewSheet />;"
+      },
+      {
+        "id": "primitives-sheet--close-button",
+        "name": "Close Button",
+        "snippet": "const CloseButton = () => <EditViewSheet />;"
+      },
+      {
+        "id": "primitives-sheet--medium",
+        "name": "Medium",
+        "snippet": "const Medium = () => <EditViewSheet size=\"md\" defaultOpen />;"
+      },
+      {
+        "id": "primitives-sheet--large",
+        "name": "Large",
+        "snippet": "const Large = () => <EditViewSheet size=\"lg\" defaultOpen />;"
+      },
+      {
+        "id": "primitives-sheet--without-footer",
+        "name": "Without Footer",
+        "snippet": "const WithoutFooter = () => <EditViewSheet defaultOpen footer={false} />;"
+      }
+    ]
+  },
+  {
+    "name": "SideNav",
+    "import": "import { SideNav } from '@honey-ds/ui';",
+    "figmaNode": "7767:777",
+    "summary": "The app’s collapsible left navigation: header with collapse toggle, My work, one section per inbox with view links and counts, and a footer.",
+    "useWhen": "Once, in the app layout. Views are links (pass a router Link via `render`).",
+    "avoidWhen": "In-page tabs or filters (use Tabs), or menus of actions (use DropdownMenu).",
+    "props": [
+      {
+        "name": "collapsed",
+        "type": "boolean",
+        "required": false,
+        "default": null,
+        "description": "Controlled collapsed state. Omit to let the nav manage it."
+      },
+      {
+        "name": "onCollapsedChange",
+        "type": "(collapsed: boolean) => void",
+        "required": false,
+        "default": null,
+        "description": ""
+      },
+      {
+        "name": "peek",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "While collapsed, widen over the content on hover or keyboard focus."
+      },
+      {
+        "name": "aria-label",
+        "type": "string",
+        "required": true,
+        "default": null,
+        "description": "Required: names the landmark, e.g. \"Inboxes\"."
+      }
+    ],
+    "stories": [
+      {
+        "id": "composites-sidenav--default",
+        "name": "Default",
+        "snippet": "const Default = () => <SideNav aria-label=\"Inboxes\">\n    <Items />\n</SideNav>;"
+      },
+      {
+        "id": "composites-sidenav--collapsed",
+        "name": "Collapsed",
+        "snippet": "const Collapsed = () => <SideNav aria-label=\"Inboxes\" collapsed peek={false} onCollapsedChange={fn()}>\n    <Items />\n</SideNav>;"
+      },
+      {
+        "id": "composites-sidenav--rail-peek",
+        "name": "Rail Peek",
+        "snippet": "const RailPeek = () => <SideNav aria-label=\"Inboxes\" collapsed>\n    <Items />\n</SideNav>;"
+      },
+      {
+        "id": "composites-sidenav--states",
+        "name": "States",
+        "snippet": "const States = () => <div className=\"flex gap-4\">\n    <SideNav aria-label=\"Hover state\">\n        <Items itemClassName=\"state-hover\" />\n    </SideNav>\n    <SideNav aria-label=\"Focus state\">\n        <Items itemClassName=\"state-focus\" />\n    </SideNav>\n</div>;"
+      }
+    ]
+  },
+  {
+    "name": "Skeleton",
+    "import": "import { Skeleton } from '@honey-ds/ui';",
+    "figmaNode": null,
+    "summary": "Honey DS shimmer placeholder: a pulsing neutral block sized with width/height utilities.",
+    "useWhen": "The loading state of a view whose layout is known: list rows, a conversation header, panel cards.",
+    "avoidWhen": "Actions in progress (use a button loading state) or unknown-length waits (use a spinner/progress).",
+    "props": [],
+    "stories": [
+      {
+        "id": "primitives-skeleton--default",
+        "name": "Default",
+        "snippet": "const Default = () => <Skeleton className=\"h-4 w-48\" />;"
+      },
+      {
+        "id": "primitives-skeleton--list-rows",
+        "name": "List Rows",
+        "snippet": "const ListRows = () => (\n  <div\n    role=\"status\"\n    aria-busy=\"true\"\n    aria-label=\"Loading conversations\"\n    className=\"flex w-96 flex-col gap-3\"\n  >\n    {[0, 1, 2].map((i) => (\n      <div key={i} className=\"flex items-center gap-3\">\n        <Skeleton className=\"size-8 rounded-full\" />\n        <div className=\"flex flex-1 flex-col gap-1.5\">\n          <Skeleton className=\"h-3.5 w-1/2\" />\n          <Skeleton className=\"h-3 w-5/6\" />\n        </div>\n        <Skeleton className=\"h-3 w-8\" />\n      </div>\n    ))}\n  </div>\n);"
+      }
+    ]
+  },
+  {
+    "name": "Tabs",
+    "import": "import { Tabs } from '@honey-ds/ui';",
+    "figmaNode": "376:1733",
+    "summary": "Honey DS tabs: underline (section tabs) or pill (compact switcher), optional icon and count; arrow keys switch tabs.",
+    "useWhen": "Switching between sibling views of the same content in place, e.g. Mine / Unassigned / Closed, or Email / Chat.",
+    "avoidWhen": "Navigating to another page (use a link or SideNav) or choosing a value in a form (use a radio group or select).",
+    "props": [],
+    "stories": [
+      {
+        "id": "primitives-tabs--default",
+        "name": "Default",
+        "snippet": "const Default = (args) => <Example defaultValue={args.defaultValue as string} />;"
+      },
+      {
+        "id": "primitives-tabs--all-variants",
+        "name": "All Variants",
+        "snippet": "const AllVariants = (args) => (\n  <div className=\"flex flex-col gap-6\">\n    {VARIANTS.map((v) => (\n      <Example key={v} variant={v} defaultValue={args.defaultValue as string} />\n    ))}\n  </div>\n);"
+      },
+      {
+        "id": "primitives-tabs--label-only",
+        "name": "Label Only",
+        "snippet": "const LabelOnly = () => (\n  <Tabs defaultValue=\"email\">\n    <TabsList variant=\"pill\" aria-label=\"Channel\">\n      <TabsTrigger value=\"email\">Email</TabsTrigger>\n      <TabsTrigger value=\"chat\">Chat</TabsTrigger>\n    </TabsList>\n  </Tabs>\n);"
+      },
+      {
+        "id": "primitives-tabs--states",
+        "name": "States",
+        "snippet": "const States = () => (\n  <div className=\"flex flex-col gap-6\">\n    {VARIANTS.map((v) => (\n      <Tabs key={v} defaultValue=\"a\">\n        <TabsList variant={v} aria-label={`${v} states`}>\n          <TabsTrigger value=\"a\" className=\"state-hover\">\n            Active hover\n          </TabsTrigger>\n          <TabsTrigger value=\"b\" className=\"state-hover\">\n            Hover\n          </TabsTrigger>\n          <TabsTrigger value=\"c\" className=\"state-focus\">\n            Focus\n          </TabsTrigger>\n          <TabsTrigger value=\"d\">Rest</TabsTrigger>\n          <TabsTrigger value=\"e\" disabled>\n            Disabled\n          </TabsTrigger>\n        </TabsList>\n      </Tabs>\n    ))}\n  </div>\n);"
+      }
+    ]
+  },
+  {
+    "name": "Tag",
+    "import": "import { Tag } from '@honey-ds/ui';",
+    "figmaNode": "374:1775",
+    "summary": "Honey DS compact chip, 5 tones × 2 sizes, optional border, icon and remove button.",
+    "useWhen": "User-applied labels on a conversation or contact, filter chips, selected values in a multi-select.",
+    "avoidWhen": "System statuses that users cannot remove (use Badge).",
+    "props": [
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true,
+        "default": null,
+        "description": "Tag label. Truncates past the 96px max width (full text stays in the title)."
+      },
+      {
+        "name": "icon",
+        "type": "ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Optional leading icon (code-side extension; not a Figma axis yet)."
+      },
+      {
+        "name": "removable",
+        "type": "boolean",
+        "required": false,
+        "default": "false",
+        "description": "Show the trailing remove button (Figma `Close`)."
+      },
+      {
+        "name": "onRemove",
+        "type": "(event: MouseEvent<HTMLButtonElement>) => void",
+        "required": false,
+        "default": null,
+        "description": "Fired when the remove button is activated (click, Enter or Space)."
+      },
+      {
+        "name": "removeLabel",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Accessible name for the remove button. Defaults to \"Remove <label>\" for string labels."
+      },
+      {
+        "name": "tone",
+        "type": "unknown",
+        "required": false,
+        "default": "'neutral'",
+        "description": ""
+      },
+      {
+        "name": "size",
+        "type": "unknown",
+        "required": false,
+        "default": "'sm'",
+        "description": ""
+      },
+      {
+        "name": "bordered",
+        "type": "unknown",
+        "required": false,
+        "default": "true",
+        "description": ""
+      }
+    ],
+    "stories": [
+      {
+        "id": "primitives-tag--default",
+        "name": "Default",
+        "snippet": "const Default = () => <Tag onRemove={fn()} removable>Billing</Tag>;"
+      },
+      {
+        "id": "primitives-tag--all-variants",
+        "name": "All Variants",
+        "snippet": "const AllVariants = (args) => (\n  <div className=\"flex flex-col gap-3\">\n    {[true, false].map((bordered) =>\n      [true, false].map((removable) => (\n        <div key={`${bordered}-${removable}`} className=\"flex flex-wrap items-center gap-2\">\n          {TONES.map((t) => (\n            <Tag\n              key={t}\n              {...args}\n              tone={t}\n              bordered={bordered}\n              removable={removable}\n              removeLabel={`Remove ${t} ${bordered ? 'bordered' : 'plain'}`}\n            >\n              {t}\n            </Tag>\n          ))}\n        </div>\n      )),\n    )}\n  </div>\n);"
+      },
+      {
+        "id": "primitives-tag--sizes",
+        "name": "Sizes",
+        "snippet": "const Sizes = args => <div className=\"flex flex-wrap items-center gap-2\">\n    {SIZES.map((s) => (\n      <Tag key={s} {...args} size={s} icon={<Tag01 />} removable removeLabel={`Remove size ${s}`}>\n        {s}\n      </Tag>\n    ))}\n    <Tag onRemove={fn()} removable>A very long label that truncates\n              </Tag>\n</div>;"
+      },
+      {
+        "id": "primitives-tag--states",
+        "name": "States",
+        "snippet": "const States = () => <div className=\"flex flex-wrap items-center gap-2\">\n    <Tag onRemove={fn()}>Static</Tag>\n    <Tag onRemove={fn()} tone=\"error\" removable>Escalated\n              </Tag>\n    <Tag onRemove={fn()} tone=\"info\" icon={<Tag01 />}>With icon\n              </Tag>\n</div>;"
+      },
+      {
+        "id": "primitives-tag--remove-with-keyboard",
+        "name": "Remove With Keyboard",
+        "snippet": "const RemoveWithKeyboard = () => <RemovableList initial={['Billing', 'Refund', 'VIP']} />;"
+      }
+    ]
+  },
+  {
+    "name": "Textarea",
+    "import": "import { Textarea } from '@honey-ds/ui';",
+    "figmaNode": "5095:755",
+    "summary": "Honey DS multi-line text field, 3 sizes, same states as Input.",
+    "useWhen": "Multi-line free text: notes, descriptions, message drafts.",
+    "avoidWhen": "Single-line values (use Input) or rich text (use the editor).",
+    "props": [
+      {
+        "name": "size",
+        "type": "unknown",
+        "required": false,
+        "default": "'sm'",
+        "description": ""
+      }
+    ],
+    "stories": [
+      {
+        "id": "primitives-textarea--default",
+        "name": "Default",
+        "snippet": "const Default = () => <Textarea aria-label=\"Note\" placeholder=\"Add a note for your team\" onChange={fn()} />;"
+      },
+      {
+        "id": "primitives-textarea--all-variants",
+        "name": "All Variants",
+        "snippet": "const AllVariants = () => <div className=\"flex flex-col gap-3\">\n    <Textarea placeholder=\"Add a note for your team\" onChange={fn()} aria-label=\"Empty\" />\n    <Textarea\n        placeholder=\"Add a note for your team\"\n        onChange={fn()}\n        aria-label=\"Filled\"\n        defaultValue=\"Customer asked for a refund on order #4821.\" />\n</div>;"
+      },
+      {
+        "id": "primitives-textarea--sizes",
+        "name": "Sizes",
+        "snippet": "const Sizes = (args) => (\n  <div className=\"flex flex-col gap-3\">\n    {SIZES.map((s) => (\n      <Textarea key={s} {...args} size={s} aria-label={`Size ${s}`} placeholder={`Size ${s}`} />\n    ))}\n  </div>\n);"
+      },
+      {
+        "id": "primitives-textarea--states",
+        "name": "States",
+        "snippet": "const States = () => <div className=\"flex flex-col gap-3\">\n    <Textarea onChange={fn()} aria-label=\"Default\" placeholder=\"Default\" />\n    <Textarea\n        placeholder=\"Add a note for your team\"\n        onChange={fn()}\n        aria-label=\"Filled\"\n        defaultValue=\"Filled value\" />\n    <Textarea\n        placeholder=\"Add a note for your team\"\n        onChange={fn()}\n        aria-label=\"Error\"\n        defaultValue=\"Too short\"\n        aria-invalid />\n    <Textarea onChange={fn()} aria-label=\"Disabled\" placeholder=\"Disabled\" disabled />\n</div>;"
+      },
+      {
+        "id": "primitives-textarea--interaction-states",
+        "name": "Interaction States",
+        "snippet": "const InteractionStates = () => <div className=\"flex flex-col gap-3\">\n    <Textarea\n        onChange={fn()}\n        className=\"state-hover\"\n        aria-label=\"Hover\"\n        placeholder=\"Hover\" />\n    <Textarea\n        onChange={fn()}\n        className=\"state-focus\"\n        aria-label=\"Focus\"\n        placeholder=\"Focus\" />\n    <Textarea\n        placeholder=\"Add a note for your team\"\n        onChange={fn()}\n        className=\"state-hover\"\n        aria-label=\"Error hover\"\n        defaultValue=\"Invalid\"\n        aria-invalid />\n    <Textarea\n        placeholder=\"Add a note for your team\"\n        onChange={fn()}\n        className=\"state-focus\"\n        aria-label=\"Error focus\"\n        defaultValue=\"Invalid\"\n        aria-invalid />\n</div>;"
+      }
+    ]
+  },
+  {
+    "name": "ThreadView",
+    "import": "import { ThreadView } from '@honey-ds/ui';",
+    "figmaNode": null,
+    "summary": "A long email thread: collapsed messages are one-line previews, expanded ones render the email in a sandboxed iframe. Virtualized.",
+    "useWhen": "The conversation timeline of an email thread.",
+    "avoidWhen": "Short, non-email text (notes, chat bubbles): render it directly. Never render email HTML outside EmailFrame.",
+    "props": [
+      {
+        "name": "messages",
+        "type": "ThreadMessage[]",
+        "required": true,
+        "default": null,
+        "description": ""
+      },
+      {
+        "name": "expandedIds",
+        "type": "ReadonlySet<string>",
+        "required": false,
+        "default": null,
+        "description": "Controlled set of expanded message ids."
+      },
+      {
+        "name": "defaultExpandedIds",
+        "type": "unknown",
+        "required": false,
+        "default": null,
+        "description": "Uncontrolled start: these ids expanded. Defaults to the last message."
+      },
+      {
+        "name": "onToggle",
+        "type": "(id: string, expanded: boolean) => void",
+        "required": false,
+        "default": null,
+        "description": ""
+      },
+      {
+        "name": "headingLevel",
+        "type": "2 | 3 | 4 | 5 | 6",
+        "required": false,
+        "default": "3",
+        "description": "Heading level of each message header, to fit the page outline."
+      },
+      {
+        "name": "aria-label",
+        "type": "string",
+        "required": false,
+        "default": "'Conversation thread'",
+        "description": ""
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": ""
+      }
+    ],
+    "stories": [
+      {
+        "id": "composites-threadview--sixty",
+        "name": "Sixty",
+        "snippet": "const Sixty = () => <ThreadView\n    messages={Array.from({ length: 60 }, (_, i) => {\n      const from = PEOPLE[i % PEOPLE.length]!;\n      return {\n        id: `m${i + 1}`,\n        from,\n        sentAt: `Oct ${1 + Math.floor(i / 6)}, ${String(8 + (i % 10)).padStart(2, '0')}:${String((i * 7) % 60).padStart(2, '0')}`,\n        preview: `Following up on ticket #${4100 + i}: the sync job failed again`,\n        html: emailHtml(i, from),\n      };\n    })}\n    defaultExpandedIds={SIXTY.filter((_, i) => i % 2 === 0).map((m) => m.id)}\n    className=\"h-160\" />;"
+      },
+      {
+        "id": "composites-threadview--hostile-email",
+        "name": "Hostile Email",
+        "snippet": "const HostileEmail = () => <div>\n    <p\n        data-testid=\"host-check\"\n        className=\"host-check p-4 text-14 leading-20 text-neutral-strong\">This paragraph is outside the email.\n              </p>\n    <ThreadView\n        messages={[\n          { id: 'h1', from: 'Mallory', sentAt: 'Oct 12, 09:00', preview: 'Hostile', html: HOSTILE },\n        ]}\n        className=\"h-160\" />\n</div>;"
+      },
+      {
+        "id": "composites-threadview--head-css",
+        "name": "Head Css",
+        "snippet": "const HeadCss = () => <div>\n    <p\n        data-testid=\"outside\"\n        className=\"lead p-4 text-14 leading-20 text-neutral-strong\">Outside the email, with the same class name.\n              </p>\n    <ThreadView\n        messages={[\n          { id: 'c1', from: 'Shop', sentAt: 'Oct 12, 09:00', preview: 'Shipped', html: HEAD_CSS },\n        ]}\n        className=\"h-160\" />\n</div>;"
+      }
+    ]
+  },
+  {
+    "name": "ToastCard",
+    "import": "import { ToastCard } from '@honey-ds/ui';",
+    "figmaNode": "484:5412",
+    "summary": "Honey DS toast: tinted surface per tone (error, warning, success, info, feature), sm (one line) or lg (title, description, action row), dismissible. Raise live toasts with useToast().show().",
+    "useWhen": "Brief confirmation or failure of an action the user just took (\"Reply sent\", \"Couldn’t assign\"), optionally with one action such as Undo.",
+    "avoidWhen": "Information the user must act on or keep reading (use a Banner or Dialog), or form validation (show it next to the field).",
+    "props": [
+      {
+        "name": "tone",
+        "type": "(typeof TOAST_TONES)[number]",
+        "required": false,
+        "default": null,
+        "description": ""
+      },
+      {
+        "name": "size",
+        "type": "'sm' | 'lg'",
+        "required": false,
+        "default": null,
+        "description": ""
+      },
+      {
+        "name": "title",
+        "type": "ReactNode",
+        "required": true,
+        "default": null,
+        "description": ""
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Second line, `lg` only (Figma Small has no description slot)."
+      },
+      {
+        "name": "icon",
+        "type": "ReactNode | false",
+        "required": false,
+        "default": null,
+        "description": "Overrides the tone icon; `false` hides it."
+      },
+      {
+        "name": "action",
+        "type": "{ label: ReactNode; onClick: () => void }",
+        "required": false,
+        "default": null,
+        "description": ""
+      },
+      {
+        "name": "dismissible",
+        "type": "boolean",
+        "required": false,
+        "default": null,
+        "description": "Show the dismiss (×) button."
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": ""
+      },
+      {
+        "name": "onDismiss",
+        "type": "() => void",
+        "required": false,
+        "default": null,
+        "description": ""
+      }
+    ],
+    "stories": [
+      {
+        "id": "primitives-toast--default",
+        "name": "Default",
+        "snippet": "const Default = () => <ToastCard title=\"Reply sent\" onDismiss={fn()} tone=\"success\" />;"
+      },
+      {
+        "id": "primitives-toast--small",
+        "name": "Small",
+        "snippet": "const Small = (args) => (\n  <div className=\"flex flex-col gap-3\">\n    {TOAST_TONES.map((t) => (\n      <ToastCard\n        key={t}\n        {...args}\n        tone={t}\n        size=\"sm\"\n        title={`${t} — Conversation assigned to Jacob`}\n        action={{ label: 'Undo', onClick: () => {} }}\n      />\n    ))}\n  </div>\n);"
+      },
+      {
+        "id": "primitives-toast--large",
+        "name": "Large",
+        "snippet": "const Large = (args) => (\n  <div className=\"flex flex-col gap-3\">\n    {TOAST_TONES.map((t) => (\n      <ToastCard\n        key={t}\n        {...args}\n        tone={t}\n        size=\"lg\"\n        title={`${t} — Reply sent`}\n        description=\"Darlene Robertson will get your reply in a few seconds.\"\n        action={{ label: 'Undo send', onClick: () => {} }}\n      />\n    ))}\n  </div>\n);"
+      },
+      {
+        "id": "primitives-toast--not-dismissible",
+        "name": "Not Dismissible",
+        "snippet": "const NotDismissible = () => <ToastCard\n    title=\"Syncing with Omni…\"\n    onDismiss={fn()}\n    tone=\"info\"\n    dismissible={false} />;"
+      },
+      {
+        "id": "primitives-toast--live",
+        "name": "Live",
+        "snippet": "const Live = () => (\n  <ToastProvider>\n    <LiveDemo />\n    <Toaster />\n  </ToastProvider>\n);"
+      }
+    ]
+  },
+  {
+    "name": "Tooltip",
+    "import": "import { Tooltip } from '@honey-ds/ui';",
+    "figmaNode": "6149:2320",
+    "summary": "Honey DS tooltip: dark bubble with a label, an optional muted description (two-line treatment), four sides and an optional arrow.",
+    "useWhen": "Naming an icon-only control or adding a short hint to a control on hover and keyboard focus.",
+    "avoidWhen": "Essential information or anything interactive (use a popover or inline text); the trigger still needs its own accessible name.",
+    "props": [],
+    "stories": [
+      {
+        "id": "primitives-tooltip--default",
+        "name": "Default",
+        "snippet": "const Default = () => (\n  <TooltipProvider>\n    <Tooltip>\n      <TooltipTrigger\n        render={\n          <Button\n            variant=\"secondary\"\n            size=\"sm\"\n            aria-label=\"Archive conversation\"\n            leadingIcon={<Archive />}\n          />\n        }\n      />\n      <TooltipContent>Archive conversation</TooltipContent>\n    </Tooltip>\n  </TooltipProvider>\n);"
+      },
+      {
+        "id": "primitives-tooltip--with-description",
+        "name": "With Description",
+        "snippet": "const WithDescription = () => (\n  <Tooltip>\n    <TooltipTrigger render={<Button variant=\"tertiary\" size=\"sm\" leadingIcon={<InfoCircle />} />}>\n      Auto-assign\n    </TooltipTrigger>\n    <TooltipContent description=\"New conversations go to the teammate with the fewest open chats.\">\n      Round robin\n    </TooltipContent>\n  </Tooltip>\n);"
+      },
+      {
+        "id": "primitives-tooltip--all-variants",
+        "name": "All Variants",
+        "snippet": "const AllVariants = () => (\n  <div className=\"grid grid-cols-3 px-8\">\n    {[false, true].flatMap((withDescription) =>\n      (['top', 'bottom', 'none', 'left', 'right', null] as const).map((side, i) =>\n        side === null ? (\n          <div key={`${String(withDescription)}-${i}`} />\n        ) : (\n          <div\n            key={`${String(withDescription)}-${side}`}\n            // Two-line tooltips are taller: give their rows room so a bottom bubble clears the next row.\n            className={cn(\n              'flex w-96 items-center justify-center',\n              withDescription ? 'h-48' : 'h-32',\n            )}\n          >\n            <Tooltip open>\n              <TooltipTrigger render={<Button variant=\"secondary\" size=\"xs\" />}>\n                {side}\n              </TooltipTrigger>\n              <TooltipContent\n                side={side === 'none' ? 'top' : side}\n                arrow={side !== 'none'}\n                description={\n                  withDescription ? 'Visible to everyone who can open this inbox.' : undefined\n                }\n              >\n                {withDescription ? 'Shared view' : 'Label'}\n              </TooltipContent>\n            </Tooltip>\n          </div>\n        ),\n      ),\n    )}\n  </div>\n);"
+      }
+    ]
+  }
+]

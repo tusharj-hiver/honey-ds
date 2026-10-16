@@ -1,0 +1,69 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+jobs:
+  checks:
+    name: Lint, typecheck, test, build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+      - name: Turbo cache
+        uses: actions/cache@v4
+        with:
+          path: .turbo
+          key: turbo-${{ runner.os }}-${{ github.sha }}
+          restore-keys: turbo-${{ runner.os }}-
+      - name: Formatting
+        run: yarn format:check
+      - name: CSS lint (token-only rule for CSS)
+        run: yarn lint:css
+      - name: One version per dependency across workspaces
+        run: yarn check-versions
+      - run: yarn turbo run lint typecheck test build --cache-dir=.turbo
+
+  storybook:
+    name: Storybook tests (a11y + interactions) and Chromatic
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Chromatic TurboSnap needs history
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+      - name: Build tokens and icons
+        run: yarn turbo run build --filter=@honey-ds/tokens --filter=@honey-ds/icons
+      - name: Install Chromium
+        run: yarn workspace @honey-ds/ui playwright install --with-deps chromium
+      - name: Run stories as tests
+        run: yarn workspace @honey-ds/ui test:storybook
+      - name: Build Storybook
+        run: yarn workspace @honey-ds/ui build-storybook --quiet
+      - name: docs/ai is up to date
+        run: |
+          yarn workspace @honey-ds/ui docs:ai
+          git diff --exit-code -- docs/ai || (echo "docs/ai is stale: run build-storybook + docs:ai and commit" && exit 1)
+      # Visual review: every story is snapshotted in light and dark (the preview's theme modes);
+      # main's builds are the accepted baselines. Skipped until the CHROMATIC_PROJECT_TOKEN secret exists.
+      - name: Publish to Chromatic
+        if: ${{ env.CHROMATIC_PROJECT_TOKEN != '' }}
+        run: yarn chromatic --exit-zero-on-changes --auto-accept-changes main

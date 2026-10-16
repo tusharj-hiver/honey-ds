@@ -1,0 +1,64 @@
+{
+ "modes": [
+  "Omni",
+  "HIG"
+ ],
+ "variables": {
+  "button/bg": {
+   "Omni": "background/brand/default",
+   "HIG": "background/royal/default"
+  },
+  "button/bg-hover": {
+   "Omni": "background/brand/strong",
+   "HIG": "background/royal/strong"
+  },
+  "button/bg-pressed": {
+   "Omni": "background/brand/intense",
+   "HIG": "background/royal/intense"
+  },
+  "button/text": {
+   "Omni": "text/on/brand",
+   "HIG": "text/on/royal"
+  },
+  "button/border": {
+   "Omni": "border/brand/strong",
+   "HIG": "border/royal/intense"
+  },
+  "button/icon": {
+   "Omni": "foreground/neutral-bold/intense",
+   "HIG": "text/on/royal"
+  },
+  "button/radius": {
+   "Omni": "radius/6",
+   "HIG": "radius/4"
+  },
+  "button/icon-destructive": {
+   "Omni": "foreground/on/error",
+   "HIG": "foreground/on/error"
+  },
+  "button/focus-ring": {
+   "Omni": "effect/focus/brand",
+   "HIG": "effect/focus/royal"
+  },
+  "link/text": {
+   "Omni": "text/info/strong",
+   "HIG": "text/royal/strong"
+  },
+  "link/text-hover": {
+   "Omni": "text/info/intense",
+   "HIG": "text/royal/intense"
+  },
+  "focus/ring-brand": {
+   "Omni": "effect/focus/brand",
+   "HIG": "effect/focus/royal"
+  },
+  "focus/ring": {
+   "Omni": "effect/focus/royal",
+   "HIG": "effect/focus/royal"
+  },
+  "focus/border": {
+   "Omni": "border/royal/strong",
+   "HIG": "border/royal/strong"
+  }
+ }
+}

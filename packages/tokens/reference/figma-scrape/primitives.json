@@ -1,0 +1,1699 @@
+{
+ "modes": [
+  "Default",
+  "HIG",
+  "HOT"
+ ],
+ "variables": {
+  "color/white/950": {
+   "Default": "#FFFFFF",
+   "HIG": "#FFFFFF",
+   "HOT": "#FFFFFF"
+  },
+  "color/white/alpha/5": {
+   "Default": "#FFFFFF \u00b7 5%",
+   "HIG": "#FFFFFF \u00b7 5%",
+   "HOT": "#FFFFFF \u00b7 5%"
+  },
+  "color/white/alpha/10": {
+   "Default": "#FFFFFF \u00b7 10%",
+   "HIG": "#FFFFFF \u00b7 10%",
+   "HOT": "#FFFFFF \u00b7 10%"
+  },
+  "color/white/alpha/20": {
+   "Default": "#FFFFFF \u00b7 20%",
+   "HIG": "#FFFFFF \u00b7 20%",
+   "HOT": "#FFFFFF \u00b7 20%"
+  },
+  "color/white/alpha/30": {
+   "Default": "#FFFFFF \u00b7 30%",
+   "HIG": "#FFFFFF \u00b7 30%",
+   "HOT": "#FFFFFF \u00b7 30%"
+  },
+  "color/white/alpha/40": {
+   "Default": "#FFFFFF \u00b7 40%",
+   "HIG": "#FFFFFF \u00b7 40%",
+   "HOT": "#FFFFFF \u00b7 40%"
+  },
+  "color/white/alpha/50": {
+   "Default": "#FFFFFF \u00b7 50%",
+   "HIG": "#FFFFFF \u00b7 50%",
+   "HOT": "#FFFFFF \u00b7 50%"
+  },
+  "color/white/alpha/60": {
+   "Default": "#FFFFFF \u00b7 60%",
+   "HIG": "#FFFFFF \u00b7 60%",
+   "HOT": "#FFFFFF \u00b7 60%"
+  },
+  "color/white/alpha/70": {
+   "Default": "#FFFFFF \u00b7 70%",
+   "HIG": "#FFFFFF \u00b7 70%",
+   "HOT": "#FFFFFF \u00b7 70%"
+  },
+  "color/white/alpha/80": {
+   "Default": "#FFFFFF \u00b7 80%",
+   "HIG": "#FFFFFF \u00b7 80%",
+   "HOT": "#FFFFFF \u00b7 80%"
+  },
+  "color/white/alpha/90": {
+   "Default": "#FFFFFF \u00b7 90%",
+   "HIG": "#FFFFFF \u00b7 90%",
+   "HOT": "#FFFFFF \u00b7 90%"
+  },
+  "color/gray/25": {
+   "Default": "#F8FAFC",
+   "HIG": "#F8FAFC",
+   "HOT": "#FAFAFA"
+  },
+  "color/gray/50": {
+   "Default": "#F1F5F9",
+   "HIG": "#F1F5F9",
+   "HOT": "#F5F5F5"
+  },
+  "color/gray/100": {
+   "Default": "#EDF1F6",
+   "HIG": "#EDF1F6",
+   "HOT": "#EEEEEE"
+  },
+  "color/gray/200": {
+   "Default": "#E2E8F0",
+   "HIG": "#E2E8F0",
+   "HOT": "#E0E0E0"
+  },
+  "color/gray/300": {
+   "Default": "#CBD5E1",
+   "HIG": "#CBD5E1",
+   "HOT": "#D4D4D4"
+  },
+  "color/gray/400": {
+   "Default": "#94A3B8",
+   "HIG": "#94A3B8",
+   "HOT": "#A3A3A3"
+  },
+  "color/gray/500": {
+   "Default": "#64758B",
+   "HIG": "#64758B",
+   "HOT": "#737373"
+  },
+  "color/gray/600": {
+   "Default": "#475569",
+   "HIG": "#475569",
+   "HOT": "#525252"
+  },
+  "color/gray/700": {
+   "Default": "#334155",
+   "HIG": "#334155",
+   "HOT": "#404040"
+  },
+  "color/gray/800": {
+   "Default": "#1E293B",
+   "HIG": "#1E293B",
+   "HOT": "#262626"
+  },
+  "color/gray/900": {
+   "Default": "#0F172A",
+   "HIG": "#0F172A",
+   "HOT": "#171717"
+  },
+  "color/gray/950": {
+   "Default": "#020617",
+   "HIG": "#020617",
+   "HOT": "#0A0A0A"
+  },
+  "color/gray/alpha/20": {
+   "Default": "#737373 \u00b7 20%",
+   "HIG": "#737373 \u00b7 20%",
+   "HOT": "#737373 \u00b7 20%"
+  },
+  "color/gray/alpha/40": {
+   "Default": "#737373 \u00b7 40%",
+   "HIG": "#737373 \u00b7 40%",
+   "HOT": "#737373 \u00b7 40%"
+  },
+  "color/gray/alpha/50": {
+   "Default": "#737373 \u00b7 50%",
+   "HIG": "#737373 \u00b7 50%",
+   "HOT": "#737373 \u00b7 50%"
+  },
+  "color/yellow/50": {
+   "Default": "#FFFBEB",
+   "HIG": "#FFFBEB",
+   "HOT": "#FFFBEB"
+  },
+  "color/yellow/100": {
+   "Default": "#FFF4C7",
+   "HIG": "#FFF4C7",
+   "HOT": "#FFF4C7"
+  },
+  "color/yellow/200": {
+   "Default": "#FFE89A",
+   "HIG": "#FFE89A",
+   "HOT": "#FFE89A"
+  },
+  "color/yellow/300": {
+   "Default": "#FFDB6E",
+   "HIG": "#FFDB6E",
+   "HOT": "#FFDB6E"
+  },
+  "color/yellow/400": {
+   "Default": "#FFCF54",
+   "HIG": "#FFCF54",
+   "HOT": "#FFCF54"
+  },
+  "color/yellow/500": {
+   "Default": "#F0B82E",
+   "HIG": "#F0B82E",
+   "HOT": "#F0B82E"
+  },
+  "color/yellow/600": {
+   "Default": "#C8941A",
+   "HIG": "#C8941A",
+   "HOT": "#C8941A"
+  },
+  "color/yellow/700": {
+   "Default": "#9A7012",
+   "HIG": "#9A7012",
+   "HOT": "#9A7012"
+  },
+  "color/yellow/800": {
+   "Default": "#6E4F0C",
+   "HIG": "#6E4F0C",
+   "HOT": "#6E4F0C"
+  },
+  "color/yellow/900": {
+   "Default": "#45310A",
+   "HIG": "#45310A",
+   "HOT": "#45310A"
+  },
+  "color/yellow/950": {
+   "Default": "#261B05",
+   "HIG": "#261B05",
+   "HOT": "#261B05"
+  },
+  "color/yellow/25": {
+   "Default": "#FFFDF5",
+   "HIG": "#FFFDF5",
+   "HOT": "#FFFDF5"
+  },
+  "color/yellow/alpha/12": {
+   "Default": "#FFCF54 \u00b7 12%",
+   "HIG": "#FFCF54 \u00b7 12%",
+   "HOT": "#FFCF54 \u00b7 12%"
+  },
+  "color/yellow/alpha/20": {
+   "Default": "#FFCF54 \u00b7 20%",
+   "HIG": "#FFCF54 \u00b7 20%",
+   "HOT": "#FFCF54 \u00b7 20%"
+  },
+  "color/yellow/alpha/30": {
+   "Default": "#FFCF54 \u00b7 30%",
+   "HIG": "#FFCF54 \u00b7 30%",
+   "HOT": "#FFCF54 \u00b7 30%"
+  },
+  "color/yellow/alpha/40": {
+   "Default": "#FFCF54 \u00b7 40%",
+   "HIG": "#FFCF54 \u00b7 40%",
+   "HOT": "#FFCF54 \u00b7 40%"
+  },
+  "color/yellow/alpha/50": {
+   "Default": "#FFCF54 \u00b7 50%",
+   "HIG": "#FFCF54 \u00b7 50%",
+   "HOT": "#FFCF54 \u00b7 50%"
+  },
+  "color/red/25": {
+   "Default": "#FFF8F8",
+   "HIG": "#FFF8F8",
+   "HOT": "#FFF8F8"
+  },
+  "color/red/50": {
+   "Default": "#FEF2F2",
+   "HIG": "#FEF2F2",
+   "HOT": "#FEF2F2"
+  },
+  "color/red/100": {
+   "Default": "#FEE2E2",
+   "HIG": "#FEE2E2",
+   "HOT": "#FEE2E2"
+  },
+  "color/red/200": {
+   "Default": "#FECACA",
+   "HIG": "#FECACA",
+   "HOT": "#FECACA"
+  },
+  "color/red/300": {
+   "Default": "#FCA5A5",
+   "HIG": "#FCA5A5",
+   "HOT": "#FCA5A5"
+  },
+  "color/red/400": {
+   "Default": "#F87171",
+   "HIG": "#F87171",
+   "HOT": "#F87171"
+  },
+  "color/red/500": {
+   "Default": "#EF4444",
+   "HIG": "#EF4444",
+   "HOT": "#EF4444"
+  },
+  "color/red/600": {
+   "Default": "#DC2626",
+   "HIG": "#DC2626",
+   "HOT": "#DC2626"
+  },
+  "color/red/700": {
+   "Default": "#B91C1C",
+   "HIG": "#B91C1C",
+   "HOT": "#B91C1C"
+  },
+  "color/red/800": {
+   "Default": "#991B1B",
+   "HIG": "#991B1B",
+   "HOT": "#991B1B"
+  },
+  "color/red/900": {
+   "Default": "#7F1D1D",
+   "HIG": "#7F1D1D",
+   "HOT": "#7F1D1D"
+  },
+  "color/red/950": {
+   "Default": "#450A0A",
+   "HIG": "#450A0A",
+   "HOT": "#450A0A"
+  },
+  "color/red/alpha/10": {
+   "Default": "#EF4444 \u00b7 10%",
+   "HIG": "#EF4444 \u00b7 10%",
+   "HOT": "#EF4444 \u00b7 10%"
+  },
+  "color/red/alpha/18": {
+   "Default": "#EF4444 \u00b7 18%",
+   "HIG": "#EF4444 \u00b7 18%",
+   "HOT": "#EF4444 \u00b7 18%"
+  },
+  "color/red/alpha/30": {
+   "Default": "#EF4444 \u00b7 30%",
+   "HIG": "#EF4444 \u00b7 30%",
+   "HOT": "#EF4444 \u00b7 30%"
+  },
+  "color/red/alpha/40": {
+   "Default": "#EF4444 \u00b7 40%",
+   "HIG": "#EF4444 \u00b7 40%",
+   "HOT": "#EF4444 \u00b7 40%"
+  },
+  "color/red/alpha/50": {
+   "Default": "#EF4444 \u00b7 50%",
+   "HIG": "#EF4444 \u00b7 50%",
+   "HOT": "#EF4444 \u00b7 50%"
+  },
+  "color/green/25": {
+   "Default": "#F7FEF9",
+   "HIG": "#F7FEF9",
+   "HOT": "#F7FEF9"
+  },
+  "color/green/50": {
+   "Default": "#F0FDF4",
+   "HIG": "#F0FDF4",
+   "HOT": "#F0FDF4"
+  },
+  "color/green/100": {
+   "Default": "#DCFCE7",
+   "HIG": "#DCFCE7",
+   "HOT": "#DCFCE7"
+  },
+  "color/green/200": {
+   "Default": "#BBF7D0",
+   "HIG": "#BBF7D0",
+   "HOT": "#BBF7D0"
+  },
+  "color/green/300": {
+   "Default": "#86EFAC",
+   "HIG": "#86EFAC",
+   "HOT": "#86EFAC"
+  },
+  "color/green/400": {
+   "Default": "#4ADE80",
+   "HIG": "#4ADE80",
+   "HOT": "#4ADE80"
+  },
+  "color/green/500": {
+   "Default": "#22C55E",
+   "HIG": "#22C55E",
+   "HOT": "#22C55E"
+  },
+  "color/green/600": {
+   "Default": "#16A34A",
+   "HIG": "#16A34A",
+   "HOT": "#16A34A"
+  },
+  "color/green/700": {
+   "Default": "#15803D",
+   "HIG": "#15803D",
+   "HOT": "#15803D"
+  },
+  "color/green/800": {
+   "Default": "#166534",
+   "HIG": "#166534",
+   "HOT": "#166534"
+  },
+  "color/green/900": {
+   "Default": "#14532D",
+   "HIG": "#14532D",
+   "HOT": "#14532D"
+  },
+  "color/green/950": {
+   "Default": "#052E16",
+   "HIG": "#052E16",
+   "HOT": "#052E16"
+  },
+  "color/green/alpha/10": {
+   "Default": "#22C55E \u00b7 10%",
+   "HIG": "#22C55E \u00b7 10%",
+   "HOT": "#22C55E \u00b7 10%"
+  },
+  "color/green/alpha/18": {
+   "Default": "#22C55E \u00b7 18%",
+   "HIG": "#22C55E \u00b7 18%",
+   "HOT": "#22C55E \u00b7 18%"
+  },
+  "color/orange/50": {
+   "Default": "#FFF7ED",
+   "HIG": "#FFF7ED",
+   "HOT": "#FFF7ED"
+  },
+  "color/orange/100": {
+   "Default": "#FFEDD5",
+   "HIG": "#FFEDD5",
+   "HOT": "#FFEDD5"
+  },
+  "color/orange/200": {
+   "Default": "#FED7AA",
+   "HIG": "#FED7AA",
+   "HOT": "#FED7AA"
+  },
+  "color/orange/300": {
+   "Default": "#FDBA74",
+   "HIG": "#FDBA74",
+   "HOT": "#FDBA74"
+  },
+  "color/orange/400": {
+   "Default": "#FB923C",
+   "HIG": "#FB923C",
+   "HOT": "#FB923C"
+  },
+  "color/orange/500": {
+   "Default": "#F97316",
+   "HIG": "#F97316",
+   "HOT": "#F97316"
+  },
+  "color/orange/600": {
+   "Default": "#EA580C",
+   "HIG": "#EA580C",
+   "HOT": "#EA580C"
+  },
+  "color/orange/700": {
+   "Default": "#C2410C",
+   "HIG": "#C2410C",
+   "HOT": "#C2410C"
+  },
+  "color/orange/800": {
+   "Default": "#9A3412",
+   "HIG": "#9A3412",
+   "HOT": "#9A3412"
+  },
+  "color/orange/900": {
+   "Default": "#7C2D12",
+   "HIG": "#7C2D12",
+   "HOT": "#7C2D12"
+  },
+  "color/orange/950": {
+   "Default": "#431407",
+   "HIG": "#431407",
+   "HOT": "#431407"
+  },
+  "color/orange/25": {
+   "Default": "#FFFBF6",
+   "HIG": "#FFFBF6",
+   "HOT": "#FFFBF6"
+  },
+  "color/orange/alpha/12": {
+   "Default": "#F97316 \u00b7 12%",
+   "HIG": "#F97316 \u00b7 12%",
+   "HOT": "#F97316 \u00b7 12%"
+  },
+  "color/orange/alpha/20": {
+   "Default": "#F97316 \u00b7 20%",
+   "HIG": "#F97316 \u00b7 20%",
+   "HOT": "#F97316 \u00b7 20%"
+  },
+  "color/royal/25": {
+   "Default": "#F7FBFF",
+   "HIG": "#F7FBFF",
+   "HOT": "#F7FBFF"
+  },
+  "color/royal/50": {
+   "Default": "#EBF3FF",
+   "HIG": "#EBF3FF",
+   "HOT": "#EBF3FF"
+  },
+  "color/royal/100": {
+   "Default": "#D8E7FD",
+   "HIG": "#D8E7FD",
+   "HOT": "#D8E7FD"
+  },
+  "color/royal/200": {
+   "Default": "#B6D2FB",
+   "HIG": "#B6D2FB",
+   "HOT": "#B6D2FB"
+  },
+  "color/royal/300": {
+   "Default": "#8CB5F8",
+   "HIG": "#8CB5F8",
+   "HOT": "#8CB5F8"
+  },
+  "color/royal/400": {
+   "Default": "#5994F2",
+   "HIG": "#5994F2",
+   "HOT": "#5994F2"
+  },
+  "color/royal/500": {
+   "Default": "#246FEA",
+   "HIG": "#246FEA",
+   "HOT": "#246FEA"
+  },
+  "color/royal/600": {
+   "Default": "#1956C8",
+   "HIG": "#1956C8",
+   "HOT": "#1956C8"
+  },
+  "color/royal/700": {
+   "Default": "#19449A",
+   "HIG": "#19449A",
+   "HOT": "#19449A"
+  },
+  "color/royal/800": {
+   "Default": "#17316D",
+   "HIG": "#17316D",
+   "HOT": "#17316D"
+  },
+  "color/royal/900": {
+   "Default": "#132149",
+   "HIG": "#132149",
+   "HOT": "#132149"
+  },
+  "color/royal/950": {
+   "Default": "#0F162F",
+   "HIG": "#0F162F",
+   "HOT": "#0F162F"
+  },
+  "color/royal/alpha/12": {
+   "Default": "#246FEA \u00b7 12%",
+   "HIG": "#246FEA \u00b7 12%",
+   "HOT": "#246FEA \u00b7 12%"
+  },
+  "color/royal/alpha/20": {
+   "Default": "#246FEA \u00b7 20%",
+   "HIG": "#246FEA \u00b7 20%",
+   "HOT": "#246FEA \u00b7 20%"
+  },
+  "color/royal/alpha/30": {
+   "Default": "#246FEA \u00b7 30%",
+   "HIG": "#246FEA \u00b7 30%",
+   "HOT": "#246FEA \u00b7 30%"
+  },
+  "color/royal/alpha/40": {
+   "Default": "#246FEA \u00b7 40%",
+   "HIG": "#246FEA \u00b7 40%",
+   "HOT": "#246FEA \u00b7 40%"
+  },
+  "color/royal/alpha/50": {
+   "Default": "#246FEA \u00b7 50%",
+   "HIG": "#246FEA \u00b7 50%",
+   "HOT": "#246FEA \u00b7 50%"
+  },
+  "color/blue/25": {
+   "Default": "#F7FAFF",
+   "HIG": "#F7FAFF",
+   "HOT": "#F7FAFF"
+  },
+  "color/blue/50": {
+   "Default": "#EFF6FF",
+   "HIG": "#EFF6FF",
+   "HOT": "#EFF6FF"
+  },
+  "color/blue/100": {
+   "Default": "#DBEAFE",
+   "HIG": "#DBEAFE",
+   "HOT": "#DBEAFE"
+  },
+  "color/blue/200": {
+   "Default": "#BFDBFE",
+   "HIG": "#BFDBFE",
+   "HOT": "#BFDBFE"
+  },
+  "color/blue/300": {
+   "Default": "#93C5FD",
+   "HIG": "#93C5FD",
+   "HOT": "#93C5FD"
+  },
+  "color/blue/400": {
+   "Default": "#60A5FA",
+   "HIG": "#60A5FA",
+   "HOT": "#60A5FA"
+  },
+  "color/blue/500": {
+   "Default": "#3B82F6",
+   "HIG": "#3B82F6",
+   "HOT": "#3B82F6"
+  },
+  "color/blue/600": {
+   "Default": "#2563EB",
+   "HIG": "#2563EB",
+   "HOT": "#2563EB"
+  },
+  "color/blue/700": {
+   "Default": "#1D4ED8",
+   "HIG": "#1D4ED8",
+   "HOT": "#1D4ED8"
+  },
+  "color/blue/800": {
+   "Default": "#1E40AF",
+   "HIG": "#1E40AF",
+   "HOT": "#1E40AF"
+  },
+  "color/blue/900": {
+   "Default": "#1E3A8A",
+   "HIG": "#1E3A8A",
+   "HOT": "#1E3A8A"
+  },
+  "color/blue/950": {
+   "Default": "#172554",
+   "HIG": "#172554",
+   "HOT": "#172554"
+  },
+  "color/blue/alpha/10": {
+   "Default": "#3B82F6 \u00b7 10%",
+   "HIG": "#3B82F6 \u00b7 10%",
+   "HOT": "#3B82F6 \u00b7 10%"
+  },
+  "color/blue/alpha/18": {
+   "Default": "#3B82F6 \u00b7 18%",
+   "HIG": "#3B82F6 \u00b7 18%",
+   "HOT": "#3B82F6 \u00b7 18%"
+  },
+  "color/teal/25": {
+   "Default": "#F7FEFC",
+   "HIG": "#F7FEFC",
+   "HOT": "#F7FEFC"
+  },
+  "color/teal/50": {
+   "Default": "#F0FDFA",
+   "HIG": "#F0FDFA",
+   "HOT": "#F0FDFA"
+  },
+  "color/teal/100": {
+   "Default": "#CCFBF1",
+   "HIG": "#CCFBF1",
+   "HOT": "#CCFBF1"
+  },
+  "color/teal/200": {
+   "Default": "#99F6E4",
+   "HIG": "#99F6E4",
+   "HOT": "#99F6E4"
+  },
+  "color/teal/300": {
+   "Default": "#5EEAD4",
+   "HIG": "#5EEAD4",
+   "HOT": "#5EEAD4"
+  },
+  "color/teal/400": {
+   "Default": "#2DD4BF",
+   "HIG": "#2DD4BF",
+   "HOT": "#2DD4BF"
+  },
+  "color/teal/500": {
+   "Default": "#14B8A6",
+   "HIG": "#14B8A6",
+   "HOT": "#14B8A6"
+  },
+  "color/teal/600": {
+   "Default": "#0D9488",
+   "HIG": "#0D9488",
+   "HOT": "#0D9488"
+  },
+  "color/teal/700": {
+   "Default": "#0F766E",
+   "HIG": "#0F766E",
+   "HOT": "#0F766E"
+  },
+  "color/teal/800": {
+   "Default": "#115E59",
+   "HIG": "#115E59",
+   "HOT": "#115E59"
+  },
+  "color/teal/900": {
+   "Default": "#134E4A",
+   "HIG": "#134E4A",
+   "HOT": "#134E4A"
+  },
+  "color/teal/950": {
+   "Default": "#042F2E",
+   "HIG": "#042F2E",
+   "HOT": "#042F2E"
+  },
+  "color/teal/alpha/10": {
+   "Default": "#14B8A6 \u00b7 10%",
+   "HIG": "#14B8A6 \u00b7 10%",
+   "HOT": "#14B8A6 \u00b7 10%"
+  },
+  "color/teal/alpha/18": {
+   "Default": "#14B8A6 \u00b7 18%",
+   "HIG": "#14B8A6 \u00b7 18%",
+   "HOT": "#14B8A6 \u00b7 18%"
+  },
+  "color/cyan/25": {
+   "Default": "#F5FEFF",
+   "HIG": "#F5FEFF",
+   "HOT": "#F5FEFF"
+  },
+  "color/cyan/50": {
+   "Default": "#ECFEFF",
+   "HIG": "#ECFEFF",
+   "HOT": "#ECFEFF"
+  },
+  "color/cyan/100": {
+   "Default": "#CFFAFE",
+   "HIG": "#CFFAFE",
+   "HOT": "#CFFAFE"
+  },
+  "color/cyan/200": {
+   "Default": "#A5F3FC",
+   "HIG": "#A5F3FC",
+   "HOT": "#A5F3FC"
+  },
+  "color/cyan/300": {
+   "Default": "#67E8F9",
+   "HIG": "#67E8F9",
+   "HOT": "#67E8F9"
+  },
+  "color/cyan/400": {
+   "Default": "#22D3EE",
+   "HIG": "#22D3EE",
+   "HOT": "#22D3EE"
+  },
+  "color/cyan/500": {
+   "Default": "#06B6D4",
+   "HIG": "#06B6D4",
+   "HOT": "#06B6D4"
+  },
+  "color/cyan/600": {
+   "Default": "#0891B2",
+   "HIG": "#0891B2",
+   "HOT": "#0891B2"
+  },
+  "color/cyan/700": {
+   "Default": "#0E7490",
+   "HIG": "#0E7490",
+   "HOT": "#0E7490"
+  },
+  "color/cyan/800": {
+   "Default": "#155E75",
+   "HIG": "#155E75",
+   "HOT": "#155E75"
+  },
+  "color/cyan/900": {
+   "Default": "#164E63",
+   "HIG": "#164E63",
+   "HOT": "#164E63"
+  },
+  "color/cyan/950": {
+   "Default": "#083344",
+   "HIG": "#083344",
+   "HOT": "#083344"
+  },
+  "color/cyan/alpha/10": {
+   "Default": "#06B6D4 \u00b7 10%",
+   "HIG": "#06B6D4 \u00b7 10%",
+   "HOT": "#06B6D4 \u00b7 10%"
+  },
+  "color/cyan/alpha/18": {
+   "Default": "#06B6D4 \u00b7 18%",
+   "HIG": "#06B6D4 \u00b7 18%",
+   "HOT": "#06B6D4 \u00b7 18%"
+  },
+  "color/violet/25": {
+   "Default": "#FAF9FF",
+   "HIG": "#FAF9FF",
+   "HOT": "#FAF9FF"
+  },
+  "color/violet/50": {
+   "Default": "#F5F3FF",
+   "HIG": "#F5F3FF",
+   "HOT": "#F5F3FF"
+  },
+  "color/violet/100": {
+   "Default": "#EDE9FE",
+   "HIG": "#EDE9FE",
+   "HOT": "#EDE9FE"
+  },
+  "color/violet/200": {
+   "Default": "#DDD6FE",
+   "HIG": "#DDD6FE",
+   "HOT": "#DDD6FE"
+  },
+  "color/violet/300": {
+   "Default": "#C4B5FD",
+   "HIG": "#C4B5FD",
+   "HOT": "#C4B5FD"
+  },
+  "color/violet/400": {
+   "Default": "#A78BFA",
+   "HIG": "#A78BFA",
+   "HOT": "#A78BFA"
+  },
+  "color/violet/500": {
+   "Default": "#8B5CF6",
+   "HIG": "#8B5CF6",
+   "HOT": "#8B5CF6"
+  },
+  "color/violet/600": {
+   "Default": "#7C3AED",
+   "HIG": "#7C3AED",
+   "HOT": "#7C3AED"
+  },
+  "color/violet/700": {
+   "Default": "#6D28D9",
+   "HIG": "#6D28D9",
+   "HOT": "#6D28D9"
+  },
+  "color/violet/800": {
+   "Default": "#5B21B6",
+   "HIG": "#5B21B6",
+   "HOT": "#5B21B6"
+  },
+  "color/violet/900": {
+   "Default": "#4C1D95",
+   "HIG": "#4C1D95",
+   "HOT": "#4C1D95"
+  },
+  "color/violet/950": {
+   "Default": "#2E1065",
+   "HIG": "#2E1065",
+   "HOT": "#2E1065"
+  },
+  "color/violet/alpha/10": {
+   "Default": "#8B5CF6 \u00b7 10%",
+   "HIG": "#8B5CF6 \u00b7 10%",
+   "HOT": "#8B5CF6 \u00b7 10%"
+  },
+  "color/violet/alpha/18": {
+   "Default": "#8B5CF6 \u00b7 18%",
+   "HIG": "#8B5CF6 \u00b7 18%",
+   "HOT": "#8B5CF6 \u00b7 18%"
+  },
+  "color/pink/25": {
+   "Default": "#FEF8FB",
+   "HIG": "#FEF8FB",
+   "HOT": "#FEF8FB"
+  },
+  "color/pink/50": {
+   "Default": "#FDF2F8",
+   "HIG": "#FDF2F8",
+   "HOT": "#FDF2F8"
+  },
+  "color/pink/100": {
+   "Default": "#FCE7F3",
+   "HIG": "#FCE7F3",
+   "HOT": "#FCE7F3"
+  },
+  "color/pink/200": {
+   "Default": "#FBCFE8",
+   "HIG": "#FBCFE8",
+   "HOT": "#FBCFE8"
+  },
+  "color/pink/300": {
+   "Default": "#F9A8D4",
+   "HIG": "#F9A8D4",
+   "HOT": "#F9A8D4"
+  },
+  "color/pink/400": {
+   "Default": "#F472B6",
+   "HIG": "#F472B6",
+   "HOT": "#F472B6"
+  },
+  "color/pink/500": {
+   "Default": "#EC4899",
+   "HIG": "#EC4899",
+   "HOT": "#EC4899"
+  },
+  "color/pink/600": {
+   "Default": "#DB2777",
+   "HIG": "#DB2777",
+   "HOT": "#DB2777"
+  },
+  "color/pink/700": {
+   "Default": "#BE185D",
+   "HIG": "#BE185D",
+   "HOT": "#BE185D"
+  },
+  "color/pink/800": {
+   "Default": "#9D174D",
+   "HIG": "#9D174D",
+   "HOT": "#9D174D"
+  },
+  "color/pink/900": {
+   "Default": "#831843",
+   "HIG": "#831843",
+   "HOT": "#831843"
+  },
+  "color/pink/950": {
+   "Default": "#500724",
+   "HIG": "#500724",
+   "HOT": "#500724"
+  },
+  "color/pink/alpha/10": {
+   "Default": "#EC4899 \u00b7 10%",
+   "HIG": "#EC4899 \u00b7 10%",
+   "HOT": "#EC4899 \u00b7 10%"
+  },
+  "color/pink/alpha/18": {
+   "Default": "#EC4899 \u00b7 18%",
+   "HIG": "#EC4899 \u00b7 18%",
+   "HOT": "#EC4899 \u00b7 18%"
+  },
+  "color/indigo/25": {
+   "Default": "#F6F8FF",
+   "HIG": "#F6F8FF",
+   "HOT": "#F6F8FF"
+  },
+  "color/indigo/50": {
+   "Default": "#EEF2FF",
+   "HIG": "#EEF2FF",
+   "HOT": "#EEF2FF"
+  },
+  "color/indigo/100": {
+   "Default": "#E0E7FF",
+   "HIG": "#E0E7FF",
+   "HOT": "#E0E7FF"
+  },
+  "color/indigo/200": {
+   "Default": "#C7D2FE",
+   "HIG": "#C7D2FE",
+   "HOT": "#C7D2FE"
+  },
+  "color/indigo/300": {
+   "Default": "#A5B4FC",
+   "HIG": "#A5B4FC",
+   "HOT": "#A5B4FC"
+  },
+  "color/indigo/400": {
+   "Default": "#818CF8",
+   "HIG": "#818CF8",
+   "HOT": "#818CF8"
+  },
+  "color/indigo/500": {
+   "Default": "#6366F1",
+   "HIG": "#6366F1",
+   "HOT": "#6366F1"
+  },
+  "color/indigo/600": {
+   "Default": "#4F46E5",
+   "HIG": "#4F46E5",
+   "HOT": "#4F46E5"
+  },
+  "color/indigo/700": {
+   "Default": "#4338CA",
+   "HIG": "#4338CA",
+   "HOT": "#4338CA"
+  },
+  "color/indigo/800": {
+   "Default": "#3730A3",
+   "HIG": "#3730A3",
+   "HOT": "#3730A3"
+  },
+  "color/indigo/900": {
+   "Default": "#312E81",
+   "HIG": "#312E81",
+   "HOT": "#312E81"
+  },
+  "color/indigo/950": {
+   "Default": "#1E1B4B",
+   "HIG": "#1E1B4B",
+   "HOT": "#1E1B4B"
+  },
+  "color/indigo/alpha/10": {
+   "Default": "#6366F1 \u00b7 10%",
+   "HIG": "#6366F1 \u00b7 10%",
+   "HOT": "#6366F1 \u00b7 10%"
+  },
+  "color/indigo/alpha/18": {
+   "Default": "#6366F1 \u00b7 18%",
+   "HIG": "#6366F1 \u00b7 18%",
+   "HOT": "#6366F1 \u00b7 18%"
+  },
+  "color/lime/50": {
+   "Default": "#F7FEE7",
+   "HIG": "#F7FEE7",
+   "HOT": "#F7FEE7"
+  },
+  "color/lime/100": {
+   "Default": "#ECFCCB",
+   "HIG": "#ECFCCB",
+   "HOT": "#ECFCCB"
+  },
+  "color/lime/200": {
+   "Default": "#D9F99D",
+   "HIG": "#D9F99D",
+   "HOT": "#D9F99D"
+  },
+  "color/lime/300": {
+   "Default": "#BEF264",
+   "HIG": "#BEF264",
+   "HOT": "#BEF264"
+  },
+  "color/lime/400": {
+   "Default": "#A3E635",
+   "HIG": "#A3E635",
+   "HOT": "#A3E635"
+  },
+  "color/lime/500": {
+   "Default": "#84CC16",
+   "HIG": "#84CC16",
+   "HOT": "#84CC16"
+  },
+  "color/lime/600": {
+   "Default": "#65A30D",
+   "HIG": "#65A30D",
+   "HOT": "#65A30D"
+  },
+  "color/lime/700": {
+   "Default": "#4D7C0F",
+   "HIG": "#4D7C0F",
+   "HOT": "#4D7C0F"
+  },
+  "color/lime/800": {
+   "Default": "#3F6212",
+   "HIG": "#3F6212",
+   "HOT": "#3F6212"
+  },
+  "color/lime/900": {
+   "Default": "#365314",
+   "HIG": "#365314",
+   "HOT": "#365314"
+  },
+  "color/lime/950": {
+   "Default": "#1A2E05",
+   "HIG": "#1A2E05",
+   "HOT": "#1A2E05"
+  },
+  "color/lime/25": {
+   "Default": "#FBFEF3",
+   "HIG": "#FBFEF3",
+   "HOT": "#FBFEF3"
+  },
+  "color/lime/alpha/10": {
+   "Default": "#84CC16 \u00b7 10%",
+   "HIG": "#84CC16 \u00b7 10%",
+   "HOT": "#84CC16 \u00b7 10%"
+  },
+  "color/lime/alpha/18": {
+   "Default": "#84CC16 \u00b7 18%",
+   "HIG": "#84CC16 \u00b7 18%",
+   "HOT": "#84CC16 \u00b7 18%"
+  },
+  "color/hig/25": {
+   "Default": "#FBFCFE",
+   "HIG": "#FBFCFE",
+   "HOT": "#FBFCFE"
+  },
+  "color/hig/50": {
+   "Default": "#F6F8FC",
+   "HIG": "#F6F8FC",
+   "HOT": "#F6F8FC"
+  },
+  "color/hig/100": {
+   "Default": "#F0F3FA",
+   "HIG": "#F0F3FA",
+   "HOT": "#F0F3FA"
+  },
+  "color/hig/200": {
+   "Default": "#E8EDF7",
+   "HIG": "#E8EDF7",
+   "HOT": "#E8EDF7"
+  },
+  "color/hig/300": {
+   "Default": "#D9E1F2",
+   "HIG": "#D9E1F2",
+   "HOT": "#D9E1F2"
+  },
+  "color/hig/400": {
+   "Default": "#B7C5E3",
+   "HIG": "#B7C5E3",
+   "HOT": "#B7C5E3"
+  },
+  "color/hig/500": {
+   "Default": "#8CA0CD",
+   "HIG": "#8CA0CD",
+   "HOT": "#8CA0CD"
+  },
+  "color/hig/600": {
+   "Default": "#647CB4",
+   "HIG": "#647CB4",
+   "HOT": "#647CB4"
+  },
+  "color/hig/700": {
+   "Default": "#465F99",
+   "HIG": "#465F99",
+   "HOT": "#465F99"
+  },
+  "color/hig/800": {
+   "Default": "#2F467A",
+   "HIG": "#2F467A",
+   "HOT": "#2F467A"
+  },
+  "color/hig/900": {
+   "Default": "#25375F",
+   "HIG": "#25375F",
+   "HOT": "#25375F"
+  },
+  "color/hig/950": {
+   "Default": "#101F41",
+   "HIG": "#101F41",
+   "HOT": "#101F41"
+  },
+  "color/hig/alpha/10": {
+   "Default": "#8CA0CD \u00b7 10%",
+   "HIG": "#8CA0CD \u00b7 10%",
+   "HOT": "#8CA0CD \u00b7 10%"
+  },
+  "color/hig/alpha/18": {
+   "Default": "#8CA0CD \u00b7 18%",
+   "HIG": "#8CA0CD \u00b7 18%",
+   "HOT": "#8CA0CD \u00b7 18%"
+  },
+  "color/black/950": {
+   "Default": "#000000",
+   "HIG": "#000000",
+   "HOT": "#000000"
+  },
+  "color/black/alpha/5": {
+   "Default": "#000000 \u00b7 5%",
+   "HIG": "#000000 \u00b7 5%",
+   "HOT": "#000000 \u00b7 5%"
+  },
+  "color/black/alpha/10": {
+   "Default": "#000000 \u00b7 10%",
+   "HIG": "#000000 \u00b7 10%",
+   "HOT": "#000000 \u00b7 10%"
+  },
+  "color/black/alpha/20": {
+   "Default": "#000000 \u00b7 20%",
+   "HIG": "#000000 \u00b7 20%",
+   "HOT": "#000000 \u00b7 20%"
+  },
+  "color/black/alpha/30": {
+   "Default": "#000000 \u00b7 30%",
+   "HIG": "#000000 \u00b7 30%",
+   "HOT": "#000000 \u00b7 30%"
+  },
+  "color/black/alpha/40": {
+   "Default": "#000000 \u00b7 40%",
+   "HIG": "#000000 \u00b7 40%",
+   "HOT": "#000000 \u00b7 40%"
+  },
+  "color/black/alpha/50": {
+   "Default": "#000000 \u00b7 50%",
+   "HIG": "#000000 \u00b7 50%",
+   "HOT": "#000000 \u00b7 50%"
+  },
+  "color/black/alpha/60": {
+   "Default": "#000000 \u00b7 60%",
+   "HIG": "#000000 \u00b7 60%",
+   "HOT": "#000000 \u00b7 60%"
+  },
+  "color/black/alpha/70": {
+   "Default": "#000000 \u00b7 70%",
+   "HIG": "#000000 \u00b7 70%",
+   "HOT": "#000000 \u00b7 70%"
+  },
+  "color/black/alpha/80": {
+   "Default": "#000000 \u00b7 80%",
+   "HIG": "#000000 \u00b7 80%",
+   "HOT": "#000000 \u00b7 80%"
+  },
+  "color/black/alpha/90": {
+   "Default": "#000000 \u00b7 90%",
+   "HIG": "#000000 \u00b7 90%",
+   "HOT": "#000000 \u00b7 90%"
+  },
+  "color/black/alpha/55": {
+   "Default": "#000000 \u00b7 55%",
+   "HIG": "#000000 \u00b7 55%",
+   "HOT": "#000000 \u00b7 55%"
+  },
+  "color/black/alpha/65": {
+   "Default": "#000000 \u00b7 65%",
+   "HIG": "#000000 \u00b7 65%",
+   "HOT": "#000000 \u00b7 65%"
+  },
+  "color/amber/25": {
+   "Default": "#FFFDF5",
+   "HIG": "#FFFDF5",
+   "HOT": "#FFFDF5"
+  },
+  "color/amber/50": {
+   "Default": "#FFFBEB",
+   "HIG": "#FFFBEB",
+   "HOT": "#FFFBEB"
+  },
+  "color/amber/100": {
+   "Default": "#FEF3C7",
+   "HIG": "#FEF3C7",
+   "HOT": "#FEF3C7"
+  },
+  "color/amber/200": {
+   "Default": "#FDE68A",
+   "HIG": "#FDE68A",
+   "HOT": "#FDE68A"
+  },
+  "color/amber/300": {
+   "Default": "#FCD34D",
+   "HIG": "#FCD34D",
+   "HOT": "#FCD34D"
+  },
+  "color/amber/400": {
+   "Default": "#FBBF24",
+   "HIG": "#FBBF24",
+   "HOT": "#FBBF24"
+  },
+  "color/amber/500": {
+   "Default": "#F59E0B",
+   "HIG": "#F59E0B",
+   "HOT": "#F59E0B"
+  },
+  "color/amber/600": {
+   "Default": "#D97706",
+   "HIG": "#D97706",
+   "HOT": "#D97706"
+  },
+  "color/amber/700": {
+   "Default": "#B45309",
+   "HIG": "#B45309",
+   "HOT": "#B45309"
+  },
+  "color/amber/800": {
+   "Default": "#92400E",
+   "HIG": "#92400E",
+   "HOT": "#92400E"
+  },
+  "color/amber/900": {
+   "Default": "#78350F",
+   "HIG": "#78350F",
+   "HOT": "#78350F"
+  },
+  "color/amber/950": {
+   "Default": "#451A03",
+   "HIG": "#451A03",
+   "HOT": "#451A03"
+  },
+  "color/amber/alpha/10": {
+   "Default": "#F59E0B \u00b7 10%",
+   "HIG": "#F59E0B \u00b7 10%",
+   "HOT": "#F59E0B \u00b7 10%"
+  },
+  "color/amber/alpha/18": {
+   "Default": "#F59E0B \u00b7 18%",
+   "HIG": "#F59E0B \u00b7 18%",
+   "HOT": "#F59E0B \u00b7 18%"
+  },
+  "color/sky/25": {
+   "Default": "#F8FCFF",
+   "HIG": "#F8FCFF",
+   "HOT": "#F8FCFF"
+  },
+  "color/sky/50": {
+   "Default": "#F0F9FF",
+   "HIG": "#F0F9FF",
+   "HOT": "#F0F9FF"
+  },
+  "color/sky/100": {
+   "Default": "#EBF7FF",
+   "HIG": "#EBF7FF",
+   "HOT": "#EBF7FF"
+  },
+  "color/sky/200": {
+   "Default": "#E0F3FF",
+   "HIG": "#E0F3FF",
+   "HOT": "#E0F3FF"
+  },
+  "color/sky/300": {
+   "Default": "#C9E8FD",
+   "HIG": "#C9E8FD",
+   "HOT": "#C9E8FD"
+  },
+  "color/sky/400": {
+   "Default": "#81D6FD",
+   "HIG": "#81D6FD",
+   "HOT": "#81D6FD"
+  },
+  "color/sky/500": {
+   "Default": "#3DC1FA",
+   "HIG": "#3DC1FA",
+   "HOT": "#3DC1FA"
+  },
+  "color/sky/600": {
+   "Default": "#0BA7EF",
+   "HIG": "#0BA7EF",
+   "HOT": "#0BA7EF"
+  },
+  "color/sky/700": {
+   "Default": "#0081C2",
+   "HIG": "#0081C2",
+   "HOT": "#0081C2"
+  },
+  "color/sky/800": {
+   "Default": "#065B89",
+   "HIG": "#065B89",
+   "HOT": "#065B89"
+  },
+  "color/sky/900": {
+   "Default": "#0B4D74",
+   "HIG": "#0B4D74",
+   "HOT": "#0B4D74"
+  },
+  "color/sky/950": {
+   "Default": "#062F46",
+   "HIG": "#062F46",
+   "HOT": "#062F46"
+  },
+  "color/sky/alpha/10": {
+   "Default": "#0EA5E9 \u00b7 10%",
+   "HIG": "#0EA5E9 \u00b7 10%",
+   "HOT": "#0EA5E9 \u00b7 10%"
+  },
+  "color/sky/alpha/18": {
+   "Default": "#0EA5E9 \u00b7 18%",
+   "HIG": "#0EA5E9 \u00b7 18%",
+   "HOT": "#0EA5E9 \u00b7 18%"
+  },
+  "color/fuchsia/25": {
+   "Default": "#FEFAFF",
+   "HIG": "#FEFAFF",
+   "HOT": "#FEFAFF"
+  },
+  "color/fuchsia/50": {
+   "Default": "#FDF4FF",
+   "HIG": "#FDF4FF",
+   "HOT": "#FDF4FF"
+  },
+  "color/fuchsia/100": {
+   "Default": "#FAE8FF",
+   "HIG": "#FAE8FF",
+   "HOT": "#FAE8FF"
+  },
+  "color/fuchsia/200": {
+   "Default": "#F5D0FE",
+   "HIG": "#F5D0FE",
+   "HOT": "#F5D0FE"
+  },
+  "color/fuchsia/300": {
+   "Default": "#F0ABFC",
+   "HIG": "#F0ABFC",
+   "HOT": "#F0ABFC"
+  },
+  "color/fuchsia/400": {
+   "Default": "#E879F9",
+   "HIG": "#E879F9",
+   "HOT": "#E879F9"
+  },
+  "color/fuchsia/500": {
+   "Default": "#D946EF",
+   "HIG": "#D946EF",
+   "HOT": "#D946EF"
+  },
+  "color/fuchsia/600": {
+   "Default": "#C026D3",
+   "HIG": "#C026D3",
+   "HOT": "#C026D3"
+  },
+  "color/fuchsia/700": {
+   "Default": "#A21CAF",
+   "HIG": "#A21CAF",
+   "HOT": "#A21CAF"
+  },
+  "color/fuchsia/800": {
+   "Default": "#86198F",
+   "HIG": "#86198F",
+   "HOT": "#86198F"
+  },
+  "color/fuchsia/900": {
+   "Default": "#701A75",
+   "HIG": "#701A75",
+   "HOT": "#701A75"
+  },
+  "color/fuchsia/950": {
+   "Default": "#4A044E",
+   "HIG": "#4A044E",
+   "HOT": "#4A044E"
+  },
+  "color/fuchsia/alpha/10": {
+   "Default": "#D946EF \u00b7 10%",
+   "HIG": "#D946EF \u00b7 10%",
+   "HOT": "#D946EF \u00b7 10%"
+  },
+  "color/fuchsia/alpha/18": {
+   "Default": "#D946EF \u00b7 18%",
+   "HIG": "#D946EF \u00b7 18%",
+   "HOT": "#D946EF \u00b7 18%"
+  },
+  "color/Slate/50": {
+   "Default": "#F8FAFC",
+   "HIG": "#F8FAFC",
+   "HOT": "#F8FAFC"
+  },
+  "color/Slate/100": {
+   "Default": "#F1F5F9",
+   "HIG": "#F1F5F9",
+   "HOT": "#F1F5F9"
+  },
+  "color/Slate/150": {
+   "Default": "#EDF1F6",
+   "HIG": "#EDF1F6",
+   "HOT": "#EDF1F6"
+  },
+  "color/Slate/200": {
+   "Default": "#E2E8F0",
+   "HIG": "#E2E8F0",
+   "HOT": "#E2E8F0"
+  },
+  "color/Slate/300": {
+   "Default": "#CBD5E1",
+   "HIG": "#CBD5E1",
+   "HOT": "#CBD5E1"
+  },
+  "color/Slate/400": {
+   "Default": "#94A3B8",
+   "HIG": "#94A3B8",
+   "HOT": "#94A3B8"
+  },
+  "color/Slate/500": {
+   "Default": "#64758B",
+   "HIG": "#64758B",
+   "HOT": "#64758B"
+  },
+  "color/Slate/600": {
+   "Default": "#475569",
+   "HIG": "#475569",
+   "HOT": "#475569"
+  },
+  "color/Slate/700": {
+   "Default": "#334155",
+   "HIG": "#334155",
+   "HOT": "#334155"
+  },
+  "color/Slate/800": {
+   "Default": "#1E293B",
+   "HIG": "#1E293B",
+   "HOT": "#1E293B"
+  },
+  "color/Slate/900": {
+   "Default": "#0F172A",
+   "HIG": "#0F172A",
+   "HOT": "#0F172A"
+  },
+  "color/Slate/950": {
+   "Default": "#020617",
+   "HIG": "#020617",
+   "HOT": "#020617"
+  },
+  "scale/0": {
+   "Default": "0",
+   "HIG": "0",
+   "HOT": "0"
+  },
+  "scale/0_5": {
+   "Default": "2",
+   "HIG": "2",
+   "HOT": "2"
+  },
+  "scale/1": {
+   "Default": "4",
+   "HIG": "4",
+   "HOT": "4"
+  },
+  "scale/1_5": {
+   "Default": "6",
+   "HIG": "6",
+   "HOT": "6"
+  },
+  "scale/2": {
+   "Default": "8",
+   "HIG": "8",
+   "HOT": "8"
+  },
+  "scale/2_5": {
+   "Default": "10",
+   "HIG": "10",
+   "HOT": "10"
+  },
+  "scale/3": {
+   "Default": "12",
+   "HIG": "12",
+   "HOT": "12"
+  },
+  "scale/3_5": {
+   "Default": "14",
+   "HIG": "14",
+   "HOT": "14"
+  },
+  "scale/4": {
+   "Default": "16",
+   "HIG": "16",
+   "HOT": "16"
+  },
+  "scale/5": {
+   "Default": "20",
+   "HIG": "20",
+   "HOT": "20"
+  },
+  "scale/6": {
+   "Default": "24",
+   "HIG": "24",
+   "HOT": "24"
+  },
+  "scale/7": {
+   "Default": "28",
+   "HIG": "28",
+   "HOT": "28"
+  },
+  "scale/8": {
+   "Default": "32",
+   "HIG": "32",
+   "HOT": "32"
+  },
+  "scale/9": {
+   "Default": "36",
+   "HIG": "36",
+   "HOT": "36"
+  },
+  "scale/10": {
+   "Default": "40",
+   "HIG": "40",
+   "HOT": "40"
+  },
+  "scale/12": {
+   "Default": "48",
+   "HIG": "48",
+   "HOT": "48"
+  },
+  "scale/14": {
+   "Default": "56",
+   "HIG": "56",
+   "HOT": "56"
+  },
+  "scale/16": {
+   "Default": "64",
+   "HIG": "64",
+   "HOT": "64"
+  },
+  "scale/20": {
+   "Default": "80",
+   "HIG": "80",
+   "HOT": "80"
+  },
+  "scale/24": {
+   "Default": "96",
+   "HIG": "96",
+   "HOT": "96"
+  },
+  "scale/30": {
+   "Default": "120",
+   "HIG": "120",
+   "HOT": "120"
+  },
+  "scale/32": {
+   "Default": "128",
+   "HIG": "128",
+   "HOT": "128"
+  },
+  "scale/36": {
+   "Default": "144",
+   "HIG": "144",
+   "HOT": "144"
+  },
+  "scale/40": {
+   "Default": "160",
+   "HIG": "160",
+   "HOT": "160"
+  },
+  "scale/48": {
+   "Default": "192",
+   "HIG": "192",
+   "HOT": "192"
+  },
+  "scale/64": {
+   "Default": "256",
+   "HIG": "256",
+   "HOT": "256"
+  },
+  "scale/80": {
+   "Default": "320",
+   "HIG": "320",
+   "HOT": "320"
+  },
+  "scale/96": {
+   "Default": "384",
+   "HIG": "384",
+   "HOT": "384"
+  },
+  "scale/full": {
+   "Default": "9999",
+   "HIG": "9999",
+   "HOT": "9999"
+  },
+  "font-weight/regular": {
+   "Default": "400",
+   "HIG": "400",
+   "HOT": "400"
+  },
+  "font-weight/medium": {
+   "Default": "500",
+   "HIG": "500",
+   "HOT": "500"
+  },
+  "font-weight/semibold": {
+   "Default": "600",
+   "HIG": "600",
+   "HOT": "600"
+  },
+  "font-weight/bold": {
+   "Default": "700",
+   "HIG": "700",
+   "HOT": "700"
+  },
+  "font-family/sans": {
+   "Default": "Inter",
+   "HIG": "Inter",
+   "HOT": "Hanken Grotesk"
+  },
+  "font-family/mono": {
+   "Default": "JetBrains Mono",
+   "HIG": "JetBrains Mono",
+   "HOT": "JetBrains Mono"
+  },
+  "font-size/12": {
+   "Default": "12",
+   "HIG": "12",
+   "HOT": "12"
+  },
+  "font-size/13": {
+   "Default": "13",
+   "HIG": "13",
+   "HOT": "13"
+  },
+  "font-size/14": {
+   "Default": "14",
+   "HIG": "14",
+   "HOT": "14"
+  },
+  "font-size/16": {
+   "Default": "16",
+   "HIG": "16",
+   "HOT": "16"
+  },
+  "font-size/18": {
+   "Default": "18",
+   "HIG": "18",
+   "HOT": "18"
+  },
+  "font-size/20": {
+   "Default": "20",
+   "HIG": "20",
+   "HOT": "20"
+  },
+  "font-size/24": {
+   "Default": "24",
+   "HIG": "24",
+   "HOT": "24"
+  },
+  "font-size/28": {
+   "Default": "28",
+   "HIG": "28",
+   "HOT": "28"
+  },
+  "line-height/14": {
+   "Default": "14",
+   "HIG": "14",
+   "HOT": "14"
+  },
+  "line-height/18": {
+   "Default": "18",
+   "HIG": "18",
+   "HOT": "18"
+  },
+  "line-height/19": {
+   "Default": "19",
+   "HIG": "19",
+   "HOT": "19"
+  },
+  "line-height/20": {
+   "Default": "20",
+   "HIG": "20",
+   "HOT": "20"
+  },
+  "line-height/22": {
+   "Default": "22",
+   "HIG": "22",
+   "HOT": "22"
+  },
+  "line-height/24": {
+   "Default": "24",
+   "HIG": "24",
+   "HOT": "24"
+  },
+  "line-height/28": {
+   "Default": "28",
+   "HIG": "28",
+   "HOT": "28"
+  },
+  "line-height/32": {
+   "Default": "32",
+   "HIG": "32",
+   "HOT": "32"
+  },
+  "line-height/36": {
+   "Default": "36",
+   "HIG": "36",
+   "HOT": "36"
+  },
+  "letter-spacing/normal": {
+   "Default": "0",
+   "HIG": "0",
+   "HOT": "0"
+  },
+  "letter-spacing/wide": {
+   "Default": "0.08",
+   "HIG": "0.08",
+   "HOT": "0.08"
+  }
+ }
+}

@@ -1,0 +1,82 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended", ":semanticCommitsDisabled"],
+  "timezone": "Asia/Kolkata",
+  "schedule": ["before 9am on monday"],
+  "rangeStrategy": "pin",
+  "postUpdateOptions": ["yarnDedupeHighest"],
+  "prConcurrentLimit": 6,
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 9am on the first day of the month"]
+  },
+  "packageRules": [
+    {
+      "description": "Every workspace pins the same version (yarn check-versions), so a dependency moves everywhere at once.",
+      "matchPackageNames": ["*"],
+      "groupName": "{{depName}}"
+    },
+    {
+      "groupName": "Tailwind",
+      "matchPackageNames": ["tailwindcss", "@tailwindcss/**"]
+    },
+    {
+      "groupName": "SVGR and SVGO",
+      "matchPackageNames": ["@svgr/**", "svgo"]
+    },
+    {
+      "groupName": "Base UI and shadcn helpers",
+      "matchPackageNames": ["@base-ui/**", "class-variance-authority", "tailwind-merge", "clsx"]
+    },
+    {
+      "description": "Peer ranges say what a package works with: widen them, never pin them.",
+      "matchDepTypes": ["peerDependencies"],
+      "rangeStrategy": "widen"
+    },
+    {
+      "groupName": "React",
+      "matchPackageNames": [
+        "react",
+        "react-dom",
+        "@types/react",
+        "@types/react-dom",
+        "@vitejs/plugin-react"
+      ]
+    },
+    {
+      "groupName": "TanStack",
+      "matchPackageNames": ["@tanstack/**"]
+    },
+    {
+      "groupName": "Storybook",
+      "matchPackageNames": [
+        "storybook",
+        "@storybook/**",
+        "storybook-addon-pseudo-states",
+        "chromatic"
+      ]
+    },
+    {
+      "groupName": "Vite and Vitest",
+      "matchPackageNames": ["vite", "vitest", "@vitest/**"]
+    },
+    {
+      "groupName": "Lint and format",
+      "matchPackageNames": [
+        "eslint",
+        "@eslint/**",
+        "typescript-eslint",
+        "eslint-plugin-*",
+        "prettier",
+        "stylelint",
+        "stylelint-*"
+      ]
+    },
+    {
+      "description": "Majors wait for a person, one group at a time.",
+      "matchUpdateTypes": ["major"],
+      "labels": ["major-upgrade"]
+    }
+  ],
+  "automerge": false
+}

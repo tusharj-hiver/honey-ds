@@ -1,0 +1,5 @@
+{
+  "effect-size": {
+    "focus": { "$type": "dimension", "$value": "1.5px" }
+  }
+}
