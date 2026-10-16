@@ -175,7 +175,10 @@ export const Collapsed: Story = {
     // Inbox views are behind their inbox's avatar on the rail.
     await expect(canvas.queryByRole('link', { name: /Unassigned/ })).toBeNull();
     const support = canvas.getByRole('button', { name: 'Support' });
-    await userEvent.hover(support);
+    // Keyboard focus, not hover: a synthetic hover never opens the tooltip outside Vitest's real
+    // pointer, so Chromatic's run would fail.
+    for (let i = 0; i < 20 && document.activeElement !== support; i++) await userEvent.tab();
+    await expect(support).toHaveFocus();
     await waitFor(() =>
       expect(document.querySelector('[data-slot=tooltip-label]')?.textContent).toBe('Support'),
     );
