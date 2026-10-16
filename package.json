@@ -12,7 +12,7 @@
   "scripts": {
     "build": "turbo run build",
     "storybook": "turbo run build --filter=@honey-ds/tokens --filter=@honey-ds/icons && yarn workspace @honey-ds/ui storybook",
-    "build-storybook": "turbo run build --filter=@honey-ds/tokens --filter=@honey-ds/icons && yarn workspace @honey-ds/ui build-storybook",
+    "build-storybook": "turbo run build --filter=@honey-ds/tokens --filter=@honey-ds/icons && yarn workspace @honey-ds/ui build-storybook --stats-json",
     "chromatic": "chromatic --storybook-build-dir packages/ui/storybook-static --only-changed",
     "typecheck": "turbo run typecheck",
     "lint": "turbo run lint",

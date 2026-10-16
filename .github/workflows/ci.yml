@@ -57,7 +57,7 @@ jobs:
       - name: Run stories as tests
         run: yarn workspace @honey-ds/ui test:storybook
       - name: Build Storybook
-        run: yarn workspace @honey-ds/ui build-storybook --quiet
+        run: yarn workspace @honey-ds/ui build-storybook --quiet --stats-json
       - name: docs/ai is up to date
         run: |
           yarn workspace @honey-ds/ui docs:ai
